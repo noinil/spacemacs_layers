@@ -70,7 +70,6 @@ values."
    '(
      chinese-wbim
      chinese-pyim
-     evil-escape
      )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -259,12 +258,13 @@ layers configuration. You are free to put any user code."
  '(erc-prompt-for-password nil)
  '(exec-path-from-shell-arguments (quote ("-l")))
  '(isearch-allow-scroll t)
+ '(line-spacing 0.2)
  '(org-agenda-files
    (quote
     ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/reading.org" "~/Org/journal.org" "~/Org/records.org")))
  '(org-archive-location "~/Org/archive.org::* From %s")
  '(org-babel-load-languages (quote ((ruby . t) (python . t) (emacs-lisp . t))))
- '(org-bullets-bullet-list (quote ("🐭" "🐮" "🐯" "🐰" "🐲" "🐍" "🐴" "🐑" "🙉" "🐔" "🐶" "🐷")))
+ '(org-bullets-bullet-list (quote ("◉" "○" "✸" "◻︎" "❀" "✡")))
  '(org-capture-templates
    (quote
     (("t" "Todo" entry
