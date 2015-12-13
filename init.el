@@ -80,10 +80,11 @@
 (defun dotspacemacs/init ()
   (setq-default
    dotspacemacs-editing-style 'hybrid
-   dotspacemacs-verbose-loading nil
+   dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
-   dotspacemacs-themes '(monokai
+   dotspacemacs-themes '(
+                         monokai
                          spacemacs-dark
                          spacemacs-light
                          solarized-dark
@@ -206,6 +207,7 @@
       (font-lock-comment-face :slant italic)
       (font-lock-string-face :slant italic)
       (font-lock-doc-face :slant italic)
+      ;; (font-lock-builtin-face :foreground "#ff9eb8")
       (font-lock-warning-face :underline nil)
 
       ;; Modeline
@@ -229,7 +231,6 @@
       ))))
 
 (defun dotspacemacs/user-config ()
-  (setq-default line-spacing 0.2)
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
       (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
@@ -322,4 +323,3 @@
  '(ruler-mode-pad ((t (:inherit ruler-mode-default))))
  '(show-paren-mismatch ((t (:foreground "green yellow" :weight bold))))
  '(widget-field ((t (:background "dark gray" :foreground "blue3")))))
-;;; init.el ends here
