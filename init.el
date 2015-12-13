@@ -239,6 +239,7 @@ layers configuration. You are free to put any user code."
  '(erc-nick "oinil")
  '(erc-nick-uniquifier "_")
  '(exec-path-from-shell-arguments (quote ("-l")))
+ '(isearch-allow-scroll t)
  '(org-agenda-files
    (quote
     ("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/reading.org" "~/Org/journal.org" "~/Org/records.org")))
@@ -290,23 +291,23 @@ layers configuration. You are free to put any user code."
      (sequence "SUBMITTED(s!)" "REVISION(v)" "|" "ACCEPTED(a!)" "PUBLISHED(p!)")
      (sequence "REPORT(r@)" "BUG(b@)" "KNOWN-CAUSE(k@)" "|" "FIXED(f!)")
      (sequence "WAITING(w)" "SOMEDAY(m)" "|" "CANCELED(c@)"))))
+ '(paradox-github-token t)
  '(ruler-mode-current-column-char 86)
  '(size-indication-mode t)
- '(smartparens-global-mode t)
- '(isearch-allow-scroll t)
- '(paradox-github-token t))
+ '(smartparens-global-mode t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
  '(erc-input-face ((t (:foreground "green yellow"))))
  '(erc-my-nick-face ((t (:foreground "lime green" :weight ultra-bold))))
  '(erc-notice-face ((t (:foreground "#7F9F7F" :weight semi-light))))
  '(erc-prompt-face ((t (:background "#3F3F3F" :foreground "yellow1" :weight extra-bold))))
  '(flycheck-warning ((t (:underline (:color "lime green" :style wave)))))
- '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
  '(font-latex-math-face ((t (:foreground "orange red"))))
  '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))))
  '(font-latex-string-face ((t (:inherit font-lock-string-face :foreground "lime green"))))
@@ -323,8 +324,9 @@ layers configuration. You are free to put any user code."
  '(font-lock-type-face ((t (:foreground "#7aa183"))))
  '(font-lock-variable-name-face ((t (:foreground "#b8bfed"))))
  '(isearch ((t (:background "#2B2B2B" :foreground "green yellow" :weight bold :height 1.1))))
- '(org-checkbox-statistics-done ((t (:inherit org-done))) t)
- '(org-checkbox-statistics-todo ((t (:inherit org-todo))) t)
+ '(lazy-highlight ((t (:background "#383838" :foreground "orange" :weight bold))))
+ '(org-checkbox-statistics-done ((t (:inherit org-done))))
+ '(org-checkbox-statistics-todo ((t (:inherit org-todo))))
  '(org-done ((t (:foreground "green yellow" :weight bold))))
  '(org-level-1 ((t (:foreground "yellow" :weight bold :height 1.2))))
  '(org-level-3 ((t (:foreground "#93D0E3"))))
@@ -332,7 +334,7 @@ layers configuration. You are free to put any user code."
  '(org-level-6 ((t (:foreground "steel blue"))))
  '(org-level-7 ((t (:inherit outline-7 :foreground "brown"))))
  '(org-scheduled-previously ((t (:foreground "DarkGoldenrod1"))))
-  '(rainbow-delimiters-depth-1-face ((t (:foreground "red"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "red"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "dark orange"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "yellow"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "green"))))
@@ -345,6 +347,4 @@ layers configuration. You are free to put any user code."
  '(ruler-mode-fill-column ((t (:inherit ruler-mode-default :foreground "#CD3700"))))
  '(ruler-mode-pad ((t (:inherit ruler-mode-default))))
  '(show-paren-mismatch ((t (:background "#6F6F6F" :foreground "green yellow" :weight bold))))
- '(widget-field ((t (:background "dark gray" :foreground "blue3"))))
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+ '(widget-field ((t (:background "dark gray" :foreground "blue3")))))
