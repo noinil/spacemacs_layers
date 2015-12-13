@@ -89,8 +89,7 @@ values."
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
-   dotspacemacs-themes '(
-                         monokai
+   dotspacemacs-themes '(monokai
                          spacemacs-dark
                          spacemacs-light
                          solarized-dark
@@ -234,7 +233,8 @@ values."
 
       ;; Other
       (region :background "#998f84")
-      (term :foreground nil :background nil)))))
+      (term :foreground nil :background nil)
+      ))))
 
 (defun dotspacemacs/user-config ()
   "Configuration function."
