@@ -1,9 +1,7 @@
-;;; package -- Summary
-;;; Commentary:
+;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
-;;; code:
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -39,7 +37,7 @@ values."
      better-defaults
      git
      github
-     eyebrowse
+     ;; eyebrowse
      osx
      ibuffer
      colors
