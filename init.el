@@ -3,9 +3,6 @@
 ;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
-  "Configuration Layers declaration.
-You should not put any user code in this function besides modifying the variable
-values."
   (setq-default
 
    dotspacemacs-distribution 'spacemacs
@@ -81,7 +78,6 @@ values."
      )))
 
 (defun dotspacemacs/init ()
-  "Initialization function."
   (setq-default
    dotspacemacs-editing-style 'hybrid
    dotspacemacs-verbose-loading nil
@@ -129,9 +125,7 @@ values."
    ))
 
 (defun dotspacemacs/user-init ()
-  "Initialization function for user code."
   (setq-default
-
    ;; Miscellaneous
 
    ;; Evil
@@ -235,11 +229,10 @@ values."
       ))))
 
 (defun dotspacemacs/user-config ()
-  "Configuration function."
-  (setq-default line-spacing 0.1)
+  (setq-default line-spacing 0.2)
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
-      (spacemacs//set-monospaced-font "Menlo" "Kaiti SC" 12 14)))
+      (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
