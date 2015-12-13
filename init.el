@@ -247,6 +247,7 @@ layers configuration. You are free to put any user code."
  '(calendar-latitude [35 1 north])
  '(calendar-longitude [135 46 east])
  '(calendar-week-start-day 1)
+ '(erc-autoaway-message "Bye!")
  '(erc-autojoin-delay 15)
  '(erc-autojoin-timing (quote ident))
  '(erc-fill-column 120)
