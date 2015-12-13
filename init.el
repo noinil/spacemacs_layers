@@ -231,6 +231,7 @@
       ))))
 
 (defun dotspacemacs/user-config ()
+  (setq powerline-default-separator 'bar)
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
       (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
