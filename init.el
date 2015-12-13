@@ -30,9 +30,13 @@ values."
             shell-default-position 'bottom
             shell-default-shell 'ansi-term
             shell-default-term-shell "/bin/zsh")
+     (chinese :variables
+              chinese-enable-youdao-dict t
+              chinese-enable-fcitx nil)
      better-defaults
      org
      git
+     github
      spell-checking
      syntax-checking
      osx
@@ -62,7 +66,12 @@ values."
    ;; configuration in `dotspacemacs/config'.
    dotspacemacs-additional-packages '()
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages
+   '(
+     chinese-wbim
+     chinese-pyim
+     evil-escape
+     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'. (default t)
@@ -218,6 +227,10 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq powerline-default-separator 'bar)
+  (setq-default line-spacing 0.1)
+  (when (configuration-layer/layer-usedp 'chinese)
+    (when (spacemacs/system-is-mac)
+      (spacemacs//set-monospaced-font "Menlo" "Kaiti SC" 12 14)))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
