@@ -83,8 +83,7 @@
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
-   dotspacemacs-themes '(
-                         monokai
+   dotspacemacs-themes '(monokai
                          spacemacs-dark
                          spacemacs-light
                          solarized-dark
@@ -231,7 +230,8 @@
       ))))
 
 (defun dotspacemacs/user-config ()
-  (setq powerline-default-separator 'bar)
+  (setq powerline-default-separator 'alternate)
+
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
       (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
