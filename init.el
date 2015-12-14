@@ -27,10 +27,11 @@
                      spell-checking-enable-by-default nil)
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil)
-     (theming :variables
-              theming-headings-inherit-from-default 'all
-              theming-headings-same-size 'all
-              theming-headings-bold 'all)
+     theming
+     ;; (theming :variables
+     ;;          theming-headings-inherit-from-default 'all
+     ;;          theming-headings-same-size 'all
+     ;;          theming-headings-bold 'all)
      better-defaults
      git
      github
@@ -83,11 +84,12 @@
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
-   dotspacemacs-themes '(monokai
+   dotspacemacs-themes '(
                          spacemacs-dark
                          spacemacs-light
-                         solarized-dark
                          leuven
+                         solarized-dark
+                         monokai
                          zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
@@ -127,6 +129,8 @@
 (defun dotspacemacs/user-init ()
   (setq-default
    ;; Miscellaneous
+   underline-minimum-offset 1
+   x-underline-at-descent-line nil
 
    ;; Evil
    evil-shift-round nil
@@ -201,7 +205,7 @@
 
    ;; Theme modifications
    theming-modifications
-   '((monokai
+   '((spacemacs-dark
       ;; Font locking
       (font-lock-comment-face :slant italic)
       (font-lock-string-face :slant italic)
@@ -226,8 +230,8 @@
 
       ;; Other
       (region :background "#998f84")
-      (term :foreground nil :background nil)
-      ))))
+      (term :foreground nil :background nil)))
+   ))
 
 (defun dotspacemacs/user-config ()
   (setq powerline-default-separator 'alternate)
