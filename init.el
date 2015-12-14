@@ -129,8 +129,6 @@
 (defun dotspacemacs/user-init ()
   (setq-default
    ;; Miscellaneous
-   underline-minimum-offset 1
-   x-underline-at-descent-line nil
 
    ;; Evil
    evil-shift-round nil
@@ -234,8 +232,11 @@
    ))
 
 (defun dotspacemacs/user-config ()
-  (setq powerline-default-separator 'alternate)
-
+  (setq-default
+   powerline-default-separator 'alternate
+   underline-minimum-offset 1
+   x-underline-at-descent-line nil
+   )
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
       (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
