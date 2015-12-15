@@ -1,6 +1,5 @@
 ;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
-;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -27,37 +26,33 @@
                      spell-checking-enable-by-default nil)
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil)
-     theming
-     ;; (theming :variables
-     ;;          theming-headings-inherit-from-default 'all
-     ;;          theming-headings-same-size 'all
-     ;;          theming-headings-bold 'all)
+     (theming :variables
+              theming-headings-same-size 'all
+              theming-headings-bold 'all)
      better-defaults
+     c-c++
+     colors
+     emacs-lisp
+     erc
+     extra-langs
      git
      github
-     ;; eyebrowse
-     osx
-     ibuffer
-     colors
-     erc
-     ranger
-     smex
-     version-control
-     yaml
-     ;; --- languages ---
-     python
-     c-c++
-     emacs-lisp
      haskell
      html
+     ibuffer
      ipython-notebook
      javascript
      latex
      markdown
      org
+     osx
+     python
+     ranger
      ruby
      shell-scripts
-     extra-langs
+     smex
+     version-control
+     yaml
      )
 
    dotspacemacs-additional-packages
@@ -69,13 +64,13 @@
    dotspacemacs-excluded-packages
    '(
      arduino-mode
+     chinese-pyim
+     chinese-wbim
+     elfeed-org
+     julia-mode
      qml-mode
      scad-mode
      stan-mode
-     elfeed-org
-     julia-mode
-     chinese-wbim
-     chinese-pyim
      )))
 
 (defun dotspacemacs/init ()
@@ -86,10 +81,10 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-themes '(
                          spacemacs-dark
-                         spacemacs-light
-                         leuven
-                         solarized-dark
                          monokai
+                         spacemacs-light
+                         solarized-dark
+                         leuven
                          zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
@@ -201,14 +196,13 @@
       "** %?\n Logged at %T\n %i\n "
       :empty-lines 1))
 
-   ;; Theme modifications
+   ;; Theme modifications --- from TheBB ---
    theming-modifications
    '((spacemacs-dark
       ;; Font locking
       (font-lock-comment-face :slant italic)
-      (font-lock-string-face :slant italic)
       (font-lock-doc-face :slant italic)
-      ;; (font-lock-builtin-face :foreground "#ff9eb8")
+      (font-lock-string-face :slant italic)
       (font-lock-warning-face :underline nil)
 
       ;; Modeline
@@ -227,16 +221,16 @@
       (flycheck-fringe-info :background nil)
 
       ;; Other
-      (region :background "#998f84")
       (term :foreground nil :background nil)))
    ))
 
 (defun dotspacemacs/user-config ()
   (setq-default
    powerline-default-separator 'alternate
-   underline-minimum-offset 1
    x-underline-at-descent-line nil
    )
+
+  ;; 中文字体等宽问题
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
       (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
