@@ -9,8 +9,7 @@
    dotspacemacs-delete-orphan-packages t
 
    dotspacemacs-configuration-layers
-   '(
-     (auto-completion :variables
+   '((auto-completion :variables
                       auto-completion-return-key-behavior nil
                       auto-completion-tab-key-behavior 'cycle
                       auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
@@ -52,27 +51,22 @@
      shell-scripts
      smex
      version-control
-     yaml
-     )
+     yaml)
 
    dotspacemacs-additional-packages
-   '(
-     helm-flycheck
+   '(helm-flycheck
      helm-fuzzier
-     nameless
-     )
+     nameless)
 
    dotspacemacs-excluded-packages
-   '(
-     arduino-mode
+   '(arduino-mode
      chinese-pyim
      chinese-wbim
      elfeed-org
      julia-mode
      qml-mode
      scad-mode
-     stan-mode
-     )))
+     stan-mode)))
 
 (defun dotspacemacs/init ()
   (setq-default
@@ -80,8 +74,7 @@
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
-   dotspacemacs-themes '(
-                         spacemacs-dark
+   dotspacemacs-themes '(spacemacs-dark
                          monokai
                          spacemacs-light
                          solarized-dark
@@ -119,8 +112,7 @@
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
-   dotspacemacs-default-package-repository nil
-   ))
+   dotspacemacs-default-package-repository nil))
 
 (defun dotspacemacs/user-init ()
   (setq-default
@@ -226,21 +218,42 @@
       (flycheck-fringe-info :background nil)
 
       ;; Other
-      (term :foreground nil :background nil)))
-   ))
+      (term :foreground nil :background nil)))))
 
 (defun dotspacemacs/user-config ()
-  ;; Variables
+  ;; Utility Definitions
+  (defun ct-define-key (keymap &rest bindings)
+    (declare (indent 1))
+    (while bindings
+      (define-key keymap (pop bindings) (pop bindings))))
+
+  ;; Variable Definitions
   (setq-default
    tab-width 4
    powerline-default-separator 'alternate
-   x-underline-at-descent-line nil
-   )
+   x-underline-at-descent-line nil)
 
   ;; Chinese font settings
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
       (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
+
+  ;; Keybindings
+  (ct-define-key evil-normal-state-map
+    "+" 'spacemacs/zoom-frm-in
+    "-" 'spacemacs/zoom-frm-out
+    "_" 'spacemacs/zoom-frm-unzoom
+    (kbd "C-n") 'evil-next-line-first-non-blank
+    (kbd "C-p") 'evil-previous-line-first-non-blank)
+  (with-eval-after-load 'ibuffer
+    (evilified-state-evilify-map ibuffer-mode-map
+      :mode ibuffer-mode
+      :bindings
+      "g" 'ibuffer-update))
+  ;; Evilification
+  (with-eval-after-load 'proced
+    (evilified-state-evilify-map proced-mode-map
+      :mode proced-mode))
 
   ;; File Format Association
   (dolist (e '(("pdb" . text-mode)
@@ -248,19 +261,8 @@
                ("C" . c++-mode)
                ("h" . c++-mode)))
     (push (cons (concat "\\." (car e) "\\'") (cdr e)) auto-mode-alist))
-  (push '("PKGBUILD" . shell-script-mode) auto-mode-alist)
 
-  ;; fixing the org \emsp problem
-  (defun my-org-clocktable-indent-string (level)
-    (if (= level 1)
-      (let ((str "|"))
-        (while (> level 2)
-          (setq level (1- level)
-                str (concat str "~~")))
-        (concat str "~> "))))
-  (advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
-
-  ;; Additional packages
+  ;; Additional packages (from TheBB)
   (use-package helm-flycheck
     :defer t
     :init
@@ -280,8 +282,7 @@
         :status nameless-mode
         :on (nameless-mode)
         :off (nameless-mode -1)
-        :evil-leader-for-mode (emacs-lisp-mode . "o:"))))
-)
+        :evil-leader-for-mode (emacs-lisp-mode . "o:")))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
