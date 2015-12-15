@@ -58,6 +58,7 @@
    dotspacemacs-additional-packages
    '(
      helm-flycheck
+     helm-fuzzier
      nameless
      )
 
@@ -127,6 +128,10 @@
 
    ;; Evil
    evil-shift-round nil
+
+   ;; Google Translate
+   google-translate-default-source-language "en"
+   google-translate-default-target-language "zh-CN"
 
    ;; Smartparens
    sp-highlight-pair-overlay nil
@@ -225,15 +230,57 @@
    ))
 
 (defun dotspacemacs/user-config ()
+  ;; Variables
   (setq-default
+   tab-width 4
    powerline-default-separator 'alternate
    x-underline-at-descent-line nil
    )
 
-  ;; 中文字体等宽问题
+  ;; Chinese font settings
   (when (configuration-layer/layer-usedp 'chinese)
     (when (spacemacs/system-is-mac)
       (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
+
+  ;; File Format Association
+  (dolist (e '(("pdb" . text-mode)
+               ("gp" . gnuplot-mode)
+               ("C" . c++-mode)
+               ("h" . c++-mode)))
+    (push (cons (concat "\\." (car e) "\\'") (cdr e)) auto-mode-alist))
+  (push '("PKGBUILD" . shell-script-mode) auto-mode-alist)
+
+  ;; fixing the org \emsp problem
+  (defun my-org-clocktable-indent-string (level)
+    (if (= level 1)
+      (let ((str "|"))
+        (while (> level 2)
+          (setq level (1- level)
+                str (concat str "~~")))
+        (concat str "~> "))))
+  (advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
+
+  ;; Additional packages
+  (use-package helm-flycheck
+    :defer t
+    :init
+    (spacemacs/set-leader-keys "eh" 'helm-flycheck))
+  (use-package helm-fuzzier
+    :defer t
+    :commands helm-fuzzier-mode
+    :init
+    (with-eval-after-load 'helm
+      (helm-fuzzier-mode 1)))
+  (use-package nameless
+    :defer t
+    :init
+    (progn
+      (add-hook 'emacs-lisp-mode-hook 'nameless-mode-from-hook)
+      (spacemacs|add-toggle nameless
+        :status nameless-mode
+        :on (nameless-mode)
+        :off (nameless-mode -1)
+        :evil-leader-for-mode (emacs-lisp-mode . "o:"))))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
