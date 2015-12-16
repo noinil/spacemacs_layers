@@ -118,6 +118,15 @@
   (setq-default
    ;; Miscellaneous
 
+   ;; Backups
+   auto-save-inteval 600
+   auto-save-timeout 300
+   backup-by-copying t
+   delete-old-versions t
+   kept-new-versions 5
+   kept-old-versions 2
+   make-backup-files nil
+
    ;; Evil
    evil-shift-round nil
 
