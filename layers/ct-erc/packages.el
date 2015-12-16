@@ -22,9 +22,10 @@
    erc-timestamp-right-column 120
    erc-prompt-for-nickserv-password nil
    erc-prompt-for-password nil
-   erc-image-inline-rescale 300
+   erc-image-inline-rescale 600
    erc-hide-list '("JOIN" "PART" "QUIT" "NICK")
-   erc-prompt (lambda () (concat "$ " (buffer-name) " =~~~>"))
+   ;; the following line is moved to line 56, after erc loading...
+   ;; erc-prompt (lambda () (concat "$ " (buffer-name) " =~~~>"))
    erc-autoaway-message "Bye!"
    erc-foolish-content
    '("\\[Github\\].* starred"
@@ -52,6 +53,7 @@
             erc-hl-nicks))
     (dolist (module '(track youtube))
       (setq erc-modules (remove module erc-modules)))
+    (setq-default erc-prompt (lambda () (concat "$ " (buffer-name) " =~~~>")))
     (erc-track-mode -1)))
 
 (defun ct-erc/post-init-persp-mode ()
