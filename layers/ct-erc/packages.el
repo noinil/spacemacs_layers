@@ -21,7 +21,6 @@
    erc-fill-column 120
    erc-timestamp-right-column 120
    erc-prompt-for-nickserv-password nil
-   erc-prompt-for-password nil
    erc-image-inline-rescale 600
    erc-hide-list '("JOIN" "PART" "QUIT" "NICK")
    ;; the following line is moved to line 56, after erc loading...
