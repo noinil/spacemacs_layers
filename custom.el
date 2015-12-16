@@ -13,6 +13,8 @@
  '(calendar-longitude [135 46 east])
  '(calendar-week-start-day 1)
  '(erc-autojoin-delay 15)
+ '(erc-prompt-for-nickserv-password nil)
+ '(erc-prompt-for-password nil)
  '(erc-autojoin-timing (quote ident))
  '(erc-nick "oinil")
  '(erc-nickserv-passwords (quote ((freenode (("oinil" . "oionillingig"))))))

@@ -24,7 +24,7 @@
    erc-prompt-for-password nil
    erc-image-inline-rescale 300
    erc-hide-list '("JOIN" "PART" "QUIT" "NICK")
-   erc-prompt (lambda nil (concat "$" (buffer-name) " =~~~>"))
+   ;; erc-prompt (lambda () (concat "$" (buffer-name) " =~~~>"))
    erc-autoaway-message "Bye!"
    erc-foolish-content
    '("\\[Github\\].* starred"
