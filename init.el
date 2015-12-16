@@ -15,6 +15,12 @@
                       auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
                       auto-completion-enable-snippets-in-popup t
                       :disabled-for erc)
+     better-defaults
+     emacs-lisp
+     git
+     github
+     markdown
+     org
      (shell :variables
            shell-default-term-shell "/bin/zsh"
            shell-default-shell 'eshell)
@@ -28,29 +34,23 @@
      (theming :variables
               theming-headings-same-size 'all
               theming-headings-bold 'all)
-     better-defaults
      c-c++
      colors
-     emacs-lisp
      erc
-     extra-langs
-     git
-     github
      haskell
      html
      ibuffer
-     ipython-notebook
      javascript
      latex
-     markdown
-     org
      osx
      python
+     ipython-notebook
      ranger
      ruby
      shell-scripts
      smex
      version-control
+     extra-langs
      yaml)
 
    dotspacemacs-additional-packages
