@@ -262,7 +262,16 @@
                ("h" . c++-mode)))
     (push (cons (concat "\\." (car e) "\\'") (cdr e)) auto-mode-alist))
 
-  ;; Additional packages (from TheBB)
+  ;; Mode hooks
+  (add-hook 'text-mode-hook 'auto-fill-mode)
+  (add-hook 'makefile-mode-hook 'whitespace-mode)
+  (remove-hook 'prog-mode-hook 'spacemacs//show-trailing-whitespace)
+
+  ;; Diminish
+  (when (eq 'hybrid dotspacemacs-editing-style)
+    (diminish 'hybrid-mode))
+
+ ;; Additional packages (from TheBB)
   (use-package helm-flycheck
     :defer t
     :init
