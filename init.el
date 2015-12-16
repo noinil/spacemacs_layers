@@ -289,6 +289,13 @@
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
 
+  ;; https://github.com/syl20bnr/spacemacs/issues/2917
+  (add-hook 'python-mode-hook
+            (lambda ()
+              (setq python-shell-interpreter "python")
+              (setq anaconda-mode-server-script
+                    "/usr/local/lib/python2.7/site-packages/anaconda_mode.py")))
+
  ;; Additional packages (from TheBB)
   (use-package helm-flycheck
     :defer t
