@@ -51,7 +51,11 @@
      smex
      version-control
      extra-langs
-     yaml)
+     yaml
+
+     ;; Personal Layers
+     ct-erc
+     )
 
    dotspacemacs-additional-packages
    '(helm-flycheck
@@ -154,6 +158,11 @@
    nameless-discover-current-name nil
    nameless-prefix ""
    nameless-separator nil
+
+   ;; IRC
+   erc-autojoin-channels-alist
+   '(("irc.gitter.im" "#syl20bnr/spacemacs" "#syl20bnr/spacemacs-devel")
+     ("freenode\\.net" "#emacs" "#emacs-cn" "#spacemacs" "#archlinux-cn" "#cafemol"))
 
    ;; Org
    org-tags-column -80
