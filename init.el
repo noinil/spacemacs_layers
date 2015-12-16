@@ -64,6 +64,7 @@
      chinese-wbim
      elfeed-org
      julia-mode
+     leuven-theme
      qml-mode
      scad-mode
      stan-mode)))
@@ -78,7 +79,6 @@
                          monokai
                          spacemacs-light
                          solarized-dark
-                         leuven
                          zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
