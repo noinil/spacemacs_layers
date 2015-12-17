@@ -10,10 +10,10 @@
 
    dotspacemacs-configuration-layers
    '((auto-completion :variables
-                      auto-completion-return-key-behavior nil
-                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior nil
                       auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
-                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
      emacs-lisp
@@ -263,6 +263,8 @@
     "_" 'spacemacs/zoom-frm-unzoom
     (kbd "C-n") 'evil-next-line-first-non-blank
     (kbd "C-p") 'evil-previous-line-first-non-blank)
+  (ct-define-key yas-minor-mode-map
+    (kbd "TAB") 'yas-expand)
   (with-eval-after-load 'ibuffer
     (evilified-state-evilify-map ibuffer-mode-map
       :mode ibuffer-mode
@@ -290,11 +292,10 @@
     (diminish 'hybrid-mode))
 
   ;; https://github.com/syl20bnr/spacemacs/issues/2917
-  (add-hook 'python-mode-hook
-            (lambda ()
-              (setq python-shell-interpreter "python")
-              (setq anaconda-mode-server-script
-                    "/usr/local/lib/python2.7/site-packages/anaconda_mode.py")))
+  (with-eval-after-load 'python
+    (setq python-shell-interpreter "python")
+    (setq anaconda-mode-server-script
+          "/User/noinil/.emacs.d/.cache/anaconda-mode/0.1.1/anaconda_mode.py"))
 
  ;; Additional packages (from TheBB)
   (use-package helm-flycheck
