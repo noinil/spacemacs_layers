@@ -263,14 +263,16 @@
     "_" 'spacemacs/zoom-frm-unzoom
     (kbd "C-n") 'evil-next-line-first-non-blank
     (kbd "C-p") 'evil-previous-line-first-non-blank)
+
   (ct-define-key yas-minor-mode-map
     (kbd "TAB") 'yas-expand)
+
+  ;; Evilification
   (with-eval-after-load 'ibuffer
     (evilified-state-evilify-map ibuffer-mode-map
       :mode ibuffer-mode
       :bindings
       "g" 'ibuffer-update))
-  ;; Evilification
   (with-eval-after-load 'proced
     (evilified-state-evilify-map proced-mode-map
       :mode proced-mode))
@@ -290,12 +292,6 @@
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
-
-  ;; https://github.com/syl20bnr/spacemacs/issues/2917
-  (with-eval-after-load 'python
-    (setq python-shell-interpreter "python")
-    (setq anaconda-mode-server-script
-          "/User/noinil/.emacs.d/.cache/anaconda-mode/0.1.1/anaconda_mode.py"))
 
  ;; Additional packages (from TheBB)
   (use-package helm-flycheck
