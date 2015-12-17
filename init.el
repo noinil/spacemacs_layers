@@ -55,6 +55,7 @@
 
      ;; Personal Layers
      ct-erc
+     ct-ibuffer
      )
 
    dotspacemacs-additional-packages
@@ -268,11 +269,11 @@
     (kbd "TAB") 'yas-expand)
 
   ;; Evilification
-  (with-eval-after-load 'ibuffer
-    (evilified-state-evilify-map ibuffer-mode-map
-      :mode ibuffer-mode
-      :bindings
-      "g" 'ibuffer-update))
+  ;; (with-eval-after-load 'ibuffer
+  ;;   (evilified-state-evilify-map ibuffer-mode-map
+  ;;     :mode ibuffer-mode
+  ;;     :bindings
+  ;;     "g" 'ibuffer-update))
   (with-eval-after-load 'proced
     (evilified-state-evilify-map proced-mode-map
       :mode proced-mode))
