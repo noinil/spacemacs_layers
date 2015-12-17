@@ -6,6 +6,7 @@
 
 (setq ct-editor-packages
       '(browse-kill-ring
+        whitespace
         ))
 
 (defun ct-editor/init-browse-kill-ring ()
@@ -17,3 +18,8 @@
       (setq browse-kill-ring-show-preview t))
     :config
     (browse-kill-ring-default-keybindings)))
+
+(defun ct-editor/post-init-whitespace ()
+  (progn
+    (setq whitespace-line-column fill-column) ;; limit line length
+    (setq whitespace-style '(face tabs empty trailing lines-tail))))
