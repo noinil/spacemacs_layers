@@ -241,6 +241,10 @@
       (term :foreground nil :background nil)))))
 
 (defun dotspacemacs/user-config ()
+  ;; Misc
+  (add-hook 'after-save-hook
+            'executable-make-buffer-file-executable-if-script-p)
+
   ;; Utility Definitions
   (defun ct-define-key (keymap &rest bindings)
     (declare (indent 1))
