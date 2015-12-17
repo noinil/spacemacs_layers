@@ -13,7 +13,6 @@
     :commands browse-kill-ring
     :init
     (progn
-      (global-set-key (kbd "s-y") 'browse-kill-ring)
       (setq browse-kill-ring-highlight-current-entry t)
       (setq browse-kill-ring-show-preview t))
     :config
