@@ -54,6 +54,7 @@
      yaml
 
      ;; Personal Layers
+     ct-editor
      ct-erc
      ct-ibuffer
      )
