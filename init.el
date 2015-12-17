@@ -57,6 +57,7 @@
      ct-editor
      ct-erc
      ct-ibuffer
+     ct-osx
      )
 
    dotspacemacs-additional-packages
