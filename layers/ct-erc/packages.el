@@ -10,6 +10,12 @@
       persp-mode
       ))
 
+(defun ct-erc/pre-init-erc ()
+  (setq-default
+   erc-autojoin-channels-alist
+   '(("irc.gitter.im" "#syl20bnr/spacemacs" "#syl20bnr/spacemacs-devel")
+     ("freenode\\.net" "#emacs" "#emacs-cn" "#spacemacs" "#archlinux-cn" "#cafemol"))))
+
 (defun ct-erc/post-init-erc ()
   (spacemacs/set-leader-keys
     "aiq" 'erc-quit-server)

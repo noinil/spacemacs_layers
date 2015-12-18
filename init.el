@@ -163,11 +163,6 @@
    nameless-prefix ""
    nameless-separator nil
 
-   ;; IRC
-   erc-autojoin-channels-alist
-   '(("irc.gitter.im" "#syl20bnr/spacemacs" "#syl20bnr/spacemacs-devel")
-     ("freenode\\.net" "#emacs" "#emacs-cn" "#spacemacs" "#archlinux-cn" "#cafemol"))
-
    ;; Theme modifications --- from TheBB ---
    theming-modifications
    '((spacemacs-dark
@@ -227,16 +222,6 @@
 
   (ct-define-key yas-minor-mode-map
     (kbd "TAB") 'yas-expand)
-
-  ;; Evilification
-  ;; (with-eval-after-load 'ibuffer
-  ;;   (evilified-state-evilify-map ibuffer-mode-map
-  ;;     :mode ibuffer-mode
-  ;;     :bindings
-  ;;     "g" 'ibuffer-update))
-  (with-eval-after-load 'proced
-    (evilified-state-evilify-map proced-mode-map
-      :mode proced-mode))
 
   ;; File Format Association
   (dolist (e '(("pdb" . text-mode)
