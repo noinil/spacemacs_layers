@@ -36,6 +36,7 @@
               theming-headings-bold 'all)
      c-c++
      colors
+     dash
      erc
      haskell
      html
