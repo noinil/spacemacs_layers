@@ -10,10 +10,6 @@
         (org-plus-contrib :step pre)
         org-bullets))
 
-;; dummy post-init function
-;; I guess this is not necessary.
-(defun ct-org/post-init-org-plus-contrib ())
-
 (defun ct-org/post-init-org ()
   (setq-default
    org-tags-column -80
@@ -67,6 +63,6 @@
   (setq-default
    org-agenda-window-setup 'other-window))
 
-(defun ct-org/post-init-org-agenda ()
+(defun ct-org/post-init-org-bullets ()
   (setq-default
    org-bullets-bullet-list '("◉" "○" "✸" "◻︎" "❀" "✡")))
