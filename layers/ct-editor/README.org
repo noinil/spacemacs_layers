@@ -1,0 +1,26 @@
+#+TITLE: ct-editor
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer adds some settings to extentsions of basic functions of Emacs.
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-editor))
+#+end_src
+
+Better add this before other `ct-*` layers, because we add evil-header prefix
+keys here.
+
+* Key bindings
+
+| Key Binding   | Description        |
+|---------------+--------------------|
+| ~<SPC> o t a~ | toggle-abbrev-mode |
+| ~s-y~         | browse-kill-ring   |

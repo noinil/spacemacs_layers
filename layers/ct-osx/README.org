@@ -1,0 +1,25 @@
+#+TITLE: ct-osx
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer uses `vkill` instead of `proced` as process manager.
+For OS X users, this might be useful.
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-osx))
+#+end_src
+
+* Key bindings
+
+| Key Binding | Description |
+|-------------+-------------|
+| ~<SPC> a p~ | vkill       |
+| ~<SPC> a P~ | vkill       |
+| ~s-p~       | vkill       |
