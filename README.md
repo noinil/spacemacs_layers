@@ -27,6 +27,11 @@ Settings to erc, like ignoring stupid messages, and changing erc prompt.
 Add auto-update to mode-hook, change key `g` to update the ibuffer list.
 Automatically delete empty filters.
 
+### ct-org
+
+Settings of org-mode.  Most of these are for my personal usage, thus might not
+be of general interest.
+
 ### ct-osx
 
 The `proced-mode` doesn't work on OS X.  Change to use `vkill` instead.
