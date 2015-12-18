@@ -12,3 +12,10 @@
   :off (abbrev-mode -1)
   :documentation "Use user defined abbreviations."
   :evil-leader "ota")
+
+(spacemacs|add-toggle autoinsert
+  :status auto-insert-mode
+  :on (auto-insert-mode)
+  :off (auto-insert-mode -1)
+  :documentation "Auto-insert for newly created files."
+  :evil-leader "otA")
