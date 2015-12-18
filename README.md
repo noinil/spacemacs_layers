@@ -1,4 +1,4 @@
-# spacemacs private
+# spacemacs layers
 
 My spacemacs layers and configurations (`init.el`).
 
