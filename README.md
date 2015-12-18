@@ -1,10 +1,8 @@
 # spacemacs private
----
 
 My spacemacs layers and configurations (`init.el`).
 
 ## Usage
----
 
 Clone this repository to `~/.spacemacs.d`.
 
@@ -13,7 +11,6 @@ Layers in the directory `layers` can be added to the
 files.
 
 ## Contents (List of Layers)
----
 
 ### ct-editor
 
