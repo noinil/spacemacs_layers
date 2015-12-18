@@ -10,7 +10,7 @@
         (org-plus-contrib :step pre)
         org-bullets))
 
-(defun ct-org/post-init-org ()
+(defun ct-org/pre-init-org ()
   (setq-default
    org-tags-column -80
    org-clock-into-drawer "LOGBOOK"
@@ -55,14 +55,11 @@
       "** %?\n Logged at %T\n %i\n"
       :empty-lines 1))))
 
-(defun ct-org/post-init-org-agenda ()
-  (setq-default
-   org-agenda-restore-windows-after-quit t))
-
 (defun ct-org/pre-init-org-agenda ()
   (setq-default
+   org-agenda-restore-windows-after-quit t
    org-agenda-window-setup 'other-window))
 
-(defun ct-org/post-init-org-bullets ()
+(defun ct-org/pre-init-org-bullets ()
   (setq-default
    org-bullets-bullet-list '("◉" "○" "✸" "◻︎" "❀" "✡")))

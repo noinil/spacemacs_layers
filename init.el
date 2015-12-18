@@ -1,4 +1,4 @@
-;; -*- mode: emacs-lisp -*-
+;;; init.el for spacemacs
 ;; This file is loaded by Spacemacs at startup.
 
 (defun dotspacemacs/layers ()
