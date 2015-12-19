@@ -17,6 +17,7 @@ files.
 Settings of some basic extensions to Emacs, with the following packages:
 - browse-kill-ring
 - whitespace
+- auto-insert (with templates)
 
 ### ct-erc
 
