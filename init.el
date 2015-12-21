@@ -167,12 +167,6 @@
    ;; Theme modifications --- from TheBB ---
    theming-modifications
    '((spacemacs-dark
-      ;; Font locking
-      (font-lock-comment-face :slant italic)
-      (font-lock-doc-face :slant italic)
-      (font-lock-string-face :slant italic)
-      (font-lock-warning-face :underline nil)
-
       ;; Modeline
       ;; (mode-line :box (:color "#999999" :line-width 1 :style released-button))
       ;; (powerline-active1 :box (:color "#999999" :line-width 1 :style released-button)
