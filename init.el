@@ -86,10 +86,8 @@
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-themes '(spacemacs-dark
-                         solarized-dark
                          monokai
-                         spacemacs-light
-                         zenburn)
+                         spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
                                :size 13
@@ -168,16 +166,18 @@
    ;; Theme modifications
    theming-modifications
    '((spacemacs-dark
-      (font-lock-builtin-face :foreground "#81a618")
-      (font-lock-constant-face :foreground "#e1a7a1")
-      (font-lock-comment-face :foreground "#6e684c" :slant italic)
+      (font-lock-builtin-face :foreground "#81a618" :weight bold)
       (font-lock-comment-delimiter-face :foreground "#78766c")
+      (font-lock-comment-face :foreground "#6e684c" :slant italic)
+      (font-lock-warning-face :underline nil)
+      (font-lock-constant-face :foreground "#e1a7a1")
       (font-lock-doc-face :foreground "#5165b8" :slant italic)
       (font-lock-function-name-face :foreground "#aadbdd")
       (font-lock-keyword-face :foreground "#a7c98b" :weight bold)
+      (font-lock-negation-char-face :foreground "#8657a1")
+      (font-lock-reference-face :foreground "#8657a1")
       (font-lock-string-face :foreground "#1aaeed" :slant italic)
       (font-lock-type-face :foreground "#7aa183")
-      (font-lock-warning-face :underline nil)
       (font-lock-variable-name-face :foreground "#b8bfed")
       (helm-prefarg :foreground "PaleGreen")
 
@@ -230,44 +230,7 @@
       (evil-search-highlight-persist-highlight-face
        :background "#fc5fef" :foreground "#000000")
       (region :background "#998f84")
-      (term :foreground nil :background nil))
-
-     (solarized-dark
-      (font-lock-builtin-face :foreground "#ff9eb8")
-      (font-lock-comment-face :slant italic)
-      (font-lock-doc-face :slant italic)
-      (font-lock-keyword-face :weight bold)
-      (font-lock-string-face :slant italic)
-      (font-lock-warning-face :underline nil)
-      (helm-prefarg :foreground "PaleGreen")
-
-      (flycheck-fringe-error :background nil)
-      (flycheck-fringe-warning :background nil)
-      (flycheck-fringe-info :background nil)
-
-      (region :background "#998f84")
-      (term :foreground nil :background nil))
-
-     (zenburn
-      (helm-prefarg :foreground "PaleGreen")
-      (font-lock-builtin-face :foreground "#81a618" :weight bold)
-      (font-lock-comment-delimiter-face :foreground "#78766c")
-      (font-lock-comment-face :foreground "#6e684c" :slant italic)
-      (font-lock-warning-face :underline nil)
-      (font-lock-constant-face :foreground "#e1a7a1")
-      (font-lock-doc-face :foreground "#5165b8" :slant italic)
-      (font-lock-function-name-face :foreground "#aadbdd")
-      (font-lock-keyword-face :foreground "#a7c98b" :weight bold)
-      (font-lock-negation-char-face :foreground "#8657a1")
-      (font-lock-reference-face :foreground "#8657a1")
-      (font-lock-string-face :foreground "#1aaeed" :slant italic)
-      (font-lock-type-face :foreground "#7aa183")
-      (font-lock-variable-name-face :foreground "#b8bfed")
-
-      (flycheck-fringe-error :background nil)
-      (flycheck-fringe-warning :background nil)
-      (flycheck-fringe-info :background nil)
-      (region :background "#998f84")))))
+      (term :foreground nil :background nil)))))
 
 (defun dotspacemacs/user-config ()
   ;; Misc
