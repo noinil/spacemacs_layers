@@ -199,6 +199,7 @@
   ;; Variable Definitions
   (setq-default
    tab-width 4
+   sentence-end-double-space t
    powerline-default-separator 'alternate
    x-underline-at-descent-line nil)
 
