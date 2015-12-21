@@ -164,6 +164,18 @@
    nameless-separator nil
 
    ;; Theme modifications
+   spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
+                                    ("insert" "chartreuse3" (bar . 2))
+                                    ("emacs" "SkyBlue2" box)
+                                    ("hybrid" "SkyBlue2" (bar . 2))
+                                    ("replace" "chocolate" (hbar . 2))
+                                    ("evilified" "LightGoldenrod3" box)
+                                    ("visual" "gray" (hbar . 2))
+                                    ("motion" "dark cyan" box)
+                                    ("lisp" "HotPink1" box)
+                                    ("iedit" "firebrick1" box)
+                                    ("iedit-insert" "firebrick1" (bar . 2)))
+
    theming-modifications
    '((spacemacs-dark
       (font-lock-builtin-face :foreground "#81a618" :weight bold)
@@ -180,12 +192,19 @@
       (font-lock-type-face :foreground "#7aa183")
       (font-lock-variable-name-face :foreground "#b8bfed")
       (helm-prefarg :foreground "PaleGreen")
+      (mode-line-buffer-id :foreground "Turquoise")
+
+      (mode-line :box (:color "dark cyan" :line-width 1.2))
+      (powerline-active1 :box (:color "dark cyan" :line-width 1.2) :background "gray20")
+      (powerline-active2 :box (:color "dark cyan" :line-width 1.2) :background "#363A3A")
+      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1.2))
+      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
+      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
 
       (flycheck-fringe-error :background nil)
       (flycheck-fringe-warning :background nil)
       (flycheck-fringe-info :background nil)
 
-      (region :background "#998f84")
       (term :foreground nil :background nil))
 
      (monokai
