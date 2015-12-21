@@ -95,7 +95,7 @@
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.15)
+                               :powerline-scale 1.0)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -283,8 +283,11 @@
   ;; Variable Definitions
   (setq-default
    tab-width 4
+   spaceline-window-numbers-unicode t
+   spaceline-workspace-numbers-unicode t
+   spaceline-hud-p nil
    sentence-end-double-space t
-   powerline-default-separator 'alternate
+   powerline-default-separator nil
    x-underline-at-descent-line nil)
 
   ;; Chinese font settings
