@@ -32,6 +32,7 @@
      (syntax-checking :variables
                       syntax-checking-enable-by-default nil)
      (theming :variables
+              theming-headings-inherit-from-default 'all
               theming-headings-same-size 'all
               theming-headings-bold 'all)
      c-c++
@@ -85,9 +86,9 @@
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-themes '(spacemacs-dark
+                         solarized-dark
                          monokai
                          spacemacs-light
-                         solarized-dark
                          zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
@@ -164,17 +165,56 @@
    nameless-prefix ""
    nameless-separator nil
 
-   ;; Theme modifications --- from TheBB ---
+   ;; Theme modifications
    theming-modifications
    '((spacemacs-dark
+      (font-lock-builtin-face :foreground "#81a618")
+      (font-lock-constant-face :foreground "#e1a7a1")
+      (font-lock-comment-face :foreground "#6e684c" :slant italic)
+      (font-lock-comment-delimiter-face :foreground "#78766c")
+      (font-lock-doc-face :foreground "#5165b8" :slant italic)
+      (font-lock-function-name-face :foreground "#aadbdd")
+      (font-lock-keyword-face :foreground "#a7c98b" :weight bold)
+      (font-lock-string-face :foreground "#1aaeed" :slant italic)
+      (font-lock-type-face :foreground "#7aa183")
+      (font-lock-warning-face :underline nil)
+      (font-lock-variable-name-face :foreground "#b8bfed")
+      (helm-prefarg :foreground "PaleGreen")
+
+      (flycheck-fringe-error :background nil)
+      (flycheck-fringe-warning :background nil)
+      (flycheck-fringe-info :background nil)
+
+      (region :background "#998f84")
+      (term :foreground nil :background nil))
+
+     (monokai
+      ;; Font locking
+      (font-lock-builtin-face :foreground "#ff9eb8")
+      (font-lock-comment-face :slant italic)
+      (font-lock-doc-face :slant italic)
+      (font-lock-keyword-face :weight bold)
+      (font-lock-string-face :slant italic)
+      (font-lock-warning-face :underline nil)
+      (web-mode-html-attr-value-face
+       :inherit font-lock-string-face :foreground nil)
+      (web-mode-html-attr-name-face
+       :inherit font-lock-variable-name-face :foreground nil)
+      (web-mode-html-tag-face
+       :inherit font-lock-builtin-face :foreground nil :weight bold)
+      (web-mode-html-tag-bracket-face
+       :inherit web-mode-html-tag-face :foreground nil)
+      (web-mode-comment-face
+       :inherit font-lock-comment-face :foreground nil)
+
       ;; Modeline
-      ;; (mode-line :box (:color "#999999" :line-width 1 :style released-button))
-      ;; (powerline-active1 :box (:color "#999999" :line-width 1 :style released-button)
-      ;;                    :background "#5a5a5a")
-      ;; (powerline-active2 :box (:color "#999999" :line-width 1 :style released-button))
-      ;; (mode-line-inactive :box (:color "#666666" :line-width 1 :style released-button))
-      ;; (powerline-inactive1 :box (:color "#666666" :line-width 1 :style released-button))
-      ;; (powerline-inactive2 :box (:color "#666666" :line-width 1 :style released-button))
+      (mode-line :box (:color "#999999" :line-width 1 :style released-button))
+      (powerline-active1 :box (:color "#999999" :line-width 1 :style released-button)
+                         :background "#5a5a5a")
+      (powerline-active2 :box (:color "#999999" :line-width 1 :style released-button))
+      (mode-line-inactive :box (:color "#666666" :line-width 1 :style released-button))
+      (powerline-inactive1 :box (:color "#666666" :line-width 1 :style released-button))
+      (powerline-inactive2 :box (:color "#666666" :line-width 1 :style released-button))
       (helm-prefarg :foreground "PaleGreen")
 
       ;; Flycheck
@@ -183,7 +223,51 @@
       (flycheck-fringe-info :background nil)
 
       ;; Other
-      (term :foreground nil :background nil)))))
+      (company-tooltip-annotation
+       :foreground "#ff9eb8" :background "#49483e")
+      (erc-timestamp-face
+       :inherit font-lock-comment-face :foreground nil)
+      (evil-search-highlight-persist-highlight-face
+       :background "#fc5fef" :foreground "#000000")
+      (region :background "#998f84")
+      (term :foreground nil :background nil))
+
+     (solarized-dark
+      (font-lock-builtin-face :foreground "#ff9eb8")
+      (font-lock-comment-face :slant italic)
+      (font-lock-doc-face :slant italic)
+      (font-lock-keyword-face :weight bold)
+      (font-lock-string-face :slant italic)
+      (font-lock-warning-face :underline nil)
+      (helm-prefarg :foreground "PaleGreen")
+
+      (flycheck-fringe-error :background nil)
+      (flycheck-fringe-warning :background nil)
+      (flycheck-fringe-info :background nil)
+
+      (region :background "#998f84")
+      (term :foreground nil :background nil))
+
+     (zenburn
+      (helm-prefarg :foreground "PaleGreen")
+      (font-lock-builtin-face :foreground "#81a618" :weight bold)
+      (font-lock-comment-delimiter-face :foreground "#78766c")
+      (font-lock-comment-face :foreground "#6e684c" :slant italic)
+      (font-lock-warning-face :underline nil)
+      (font-lock-constant-face :foreground "#e1a7a1")
+      (font-lock-doc-face :foreground "#5165b8" :slant italic)
+      (font-lock-function-name-face :foreground "#aadbdd")
+      (font-lock-keyword-face :foreground "#a7c98b" :weight bold)
+      (font-lock-negation-char-face :foreground "#8657a1")
+      (font-lock-reference-face :foreground "#8657a1")
+      (font-lock-string-face :foreground "#1aaeed" :slant italic)
+      (font-lock-type-face :foreground "#7aa183")
+      (font-lock-variable-name-face :foreground "#b8bfed")
+
+      (flycheck-fringe-error :background nil)
+      (flycheck-fringe-warning :background nil)
+      (flycheck-fringe-info :background nil)
+      (region :background "#998f84")))))
 
 (defun dotspacemacs/user-config ()
   ;; Misc
