@@ -165,19 +165,66 @@
 
    ;; Theme modifications
    spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
-                                    ("insert" "chartreuse3" (bar . 2))
-                                    ("emacs" "SkyBlue2" box)
-                                    ("hybrid" "SkyBlue2" (bar . 2))
-                                    ("replace" "chocolate" (hbar . 2))
-                                    ("evilified" "LightGoldenrod3" box)
-                                    ("visual" "gray" (hbar . 2))
-                                    ("motion" "dark cyan" box)
-                                    ("lisp" "HotPink1" box)
-                                    ("iedit" "firebrick1" box)
-                                    ("iedit-insert" "firebrick1" (bar . 2)))
+                     ("insert" "chartreuse3" (bar . 2))
+                     ("emacs" "SkyBlue2" box)
+                     ("hybrid" "SkyBlue2" (bar . 2))
+                     ("replace" "chocolate" (hbar . 2))
+                     ("evilified" "LightGoldenrod3" box)
+                     ("visual" "gray" (hbar . 2))
+                     ("motion" "dark cyan" box)
+                     ("lisp" "HotPink1" box)
+                     ("iedit" "firebrick1" box)
+                     ("iedit-insert" "firebrick1" (bar . 2)))
 
    theming-modifications
    '((spacemacs-dark
+      ;; font-lock-faces
+      (font-lock-builtin-face :foreground "#b55353" :weight bold)
+      (font-lock-comment-delimiter-face :foreground "#62562c")
+      (font-lock-comment-face :foreground "#61524f" :slant italic)
+      (font-lock-warning-face :underline nil)
+      (font-lock-constant-face :foreground "#6f8bad")
+      (font-lock-doc-face :foreground "#5165b8" :slant italic)
+      (font-lock-string-face :foreground "#0083d9" :slant italic)
+      (font-lock-function-name-face :foreground "#408a9c")
+      (font-lock-variable-name-face :foreground "#5f995f")
+      (font-lock-keyword-face :foreground "#9d72a8" :weight bold)
+      (font-lock-negation-char-face :foreground "SlateBlue")
+      (font-lock-reference-face :foreground "SlateBlue")
+      (font-lock-type-face :foreground "#725da8")
+
+      ;; latex-font-faces
+      (font-latex-sectioning-0-face :foreground "SpringGreen")
+      (font-latex-sectioning-1-face :foreground "OrangeRed")
+      (font-latex-sectioning-2-face :foreground "DarkOrange")
+      (font-latex-sectioning-3-face :foreground "Orange")
+      (font-latex-sectioning-4-face :foreground "Gold")
+      (font-latex-sedate-face :foreground "SteelBlue")
+      (font-latex-slide-title-face :foreground "DeepSkyBlue")
+
+      ;; mode-line-faces
+      (mode-line :box (:color "dark cyan" :line-width 1.2))
+      (powerline-active1 :box (:color "dark cyan" :line-width 1.2) :background "gray20")
+      (powerline-active2 :box (:color "dark cyan" :line-width 1.2) :background "#363A3A")
+      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1.2))
+      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
+      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
+
+      ;; flycheck-faces
+      (flycheck-fringe-error :background nil)
+      (flycheck-fringe-warning :background nil)
+      (flycheck-fringe-info :background nil)
+
+      ;; misc
+      (helm-prefarg :foreground "PaleGreen")
+      (mode-line-buffer-id :foreground "Turquoise")
+      (which-key-key-face :foreground "dark cyan")
+      (helm-source-header :background "dark cyan")
+      (term :foreground nil :background nil))
+
+     (monokai
+      ;; Font locking
+      (default :foreground "#b2b2b2")
       (font-lock-builtin-face :foreground "#81a618" :weight bold)
       (font-lock-comment-delimiter-face :foreground "#78766c")
       (font-lock-comment-face :foreground "#6e684c" :slant italic)
@@ -193,28 +240,7 @@
       (font-lock-variable-name-face :foreground "#b8bfed")
       (helm-prefarg :foreground "PaleGreen")
       (mode-line-buffer-id :foreground "Turquoise")
-
-      (mode-line :box (:color "dark cyan" :line-width 1.2))
-      (powerline-active1 :box (:color "dark cyan" :line-width 1.2) :background "gray20")
-      (powerline-active2 :box (:color "dark cyan" :line-width 1.2) :background "#363A3A")
-      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1.2))
-      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
-      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
-
-      (flycheck-fringe-error :background nil)
-      (flycheck-fringe-warning :background nil)
-      (flycheck-fringe-info :background nil)
-
-      (term :foreground nil :background nil))
-
-     (monokai
-      ;; Font locking
-      (font-lock-builtin-face :foreground "#ff9eb8")
-      (font-lock-comment-face :slant italic)
-      (font-lock-doc-face :slant italic)
-      (font-lock-keyword-face :weight bold)
-      (font-lock-string-face :slant italic)
-      (font-lock-warning-face :underline nil)
+      (which-key-key-face :foreground "dark cyan")
       (web-mode-html-attr-value-face
        :inherit font-lock-string-face :foreground nil)
       (web-mode-html-attr-name-face
@@ -226,17 +252,14 @@
       (web-mode-comment-face
        :inherit font-lock-comment-face :foreground nil)
 
-      ;; Modeline
-      (mode-line :box (:color "#999999" :line-width 1 :style released-button))
-      (powerline-active1 :box (:color "#999999" :line-width 1 :style released-button)
-                         :background "#5a5a5a")
-      (powerline-active2 :box (:color "#999999" :line-width 1 :style released-button))
-      (mode-line-inactive :box (:color "#666666" :line-width 1 :style released-button))
-      (powerline-inactive1 :box (:color "#666666" :line-width 1 :style released-button))
-      (powerline-inactive2 :box (:color "#666666" :line-width 1 :style released-button))
-      (helm-prefarg :foreground "PaleGreen")
+      (mode-line :box (:color "dark cyan" :line-width 1.2))
+      (powerline-active1 :box (:color "dark cyan" :line-width 1.2) :background "gray20")
+      (powerline-active2 :box (:color "dark cyan" :line-width 1.2) :background "#363A3A")
+      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1.2))
+      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
+      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
 
-      ;; Flycheck
+     ;; Flycheck
       (flycheck-fringe-error :background nil)
       (flycheck-fringe-warning :background nil)
       (flycheck-fringe-info :background nil)
