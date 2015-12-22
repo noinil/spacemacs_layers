@@ -20,7 +20,7 @@
   :documentation "Auto-insert for newly created files."
   :evil-leader "otA")
 
-(spacemacs|add-toggle evil-visual-mark-mode
+(spacemacs|add-toggle vim-visual-mark
   :status evil-visual-mark-mode
   :on (evil-visual-mark-mode)
   :off (evil-visual-mark-mode -1)
@@ -31,5 +31,12 @@
   :status beacon-mode
   :on (beacon-mode)
   :off (beacon-mode -1)
-  :documentation "Never lose your cursor again"
+  :documentation "Never lose your cursor again."
   :evil-leader "otb")
+
+(spacemacs|add-toggle origami
+  :status origami-mode
+  :on (origami-mode)
+  :off (origami-mode -1)
+  :documentation "A text folding minor mode for Emacs."
+  :evil-leader "oto")

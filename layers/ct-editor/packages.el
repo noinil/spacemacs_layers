@@ -9,6 +9,8 @@
         whitespace
         autoinsert
         beacon
+        ;; evil-vimish-fold
+        origami
         evil-visual-mark-mode
         ))
 
@@ -45,6 +47,44 @@
 (defun ct-editor/init-beacon ()
   (use-package beacon
     :init
-    (beacon-mode +1)
+    (beacon-mode -1)
     :config
     (spacemacs|hide-lighter beacon-mode)))
+
+;; (defun ct-editor/init-evil-vimish-fold ()
+;;   (use-package evil-vimish-fold
+;;     :init
+;;     (vimish-fold-global-mode 1)))
+
+(defun ct-editor/init-origami ()
+  (use-package origami
+    :defer t
+    :init
+    (global-origami-mode +1)
+    ))
+
+(defun ct-editor/post-init-origami ()
+  (with-eval-after-load 'origami
+    (spacemacs/declare-prefix "oo" "origami")
+    ;; close
+    (spacemacs/set-leader-keys "ooc" 'origami-close-node)
+    (spacemacs/set-leader-keys "oox" 'origami-close-all-nodes)
+    (spacemacs/set-leader-keys "ooC" 'origami-close-node-recursively)
+
+    ;; open
+    (spacemacs/set-leader-keys "ooo" 'origami-open-node)
+    (spacemacs/set-leader-keys "ooa" 'origami-open-all-nodes)
+    (spacemacs/set-leader-keys "ooO" 'origami-open-node-recursively)
+    (spacemacs/set-leader-keys "oos" 'origami-show-node)
+    (spacemacs/set-leader-keys "ooS" 'origami-show-only-node)
+
+    ;; toggle-cycle
+    (spacemacs/set-leader-keys "oot" 'origami-toggle-node)
+    (spacemacs/set-leader-keys "ooT" 'origami-toggle-all-nodes)
+
+    ;; navigate
+    (spacemacs/set-leader-keys "oon" 'origami-next-fold)
+    (spacemacs/set-leader-keys "oop" 'origami-previous-fold)
+
+    (spacemacs|diminish origami-mode " ⏂" " OriG")
+    ))
