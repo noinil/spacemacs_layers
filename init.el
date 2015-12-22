@@ -142,17 +142,8 @@
    google-translate-default-source-language "en"
    google-translate-default-target-language "zh-CN"
 
-   ;; Smartparens
-   sp-highlight-pair-overlay nil
-   sp-highlight-wrap-overlay nil
-   sp-highlight-wrap-tag-overlay nil
-
    ;; Ranger
    ranger-override-dired t
-
-   ;; LaTeX
-   ;; font-latex-fontify-script nil
-   ;; TeX-newline-function 'reindent-then-newline-and-indent
 
    ;; Emacs Lisp
    nameless-global-aliases
