@@ -26,3 +26,10 @@
   :off (evil-visual-mark-mode -1)
   :documentation "Displays all the evil marks you have registered on a buffe."
   :evil-leader "otm")
+
+(spacemacs|add-toggle beacon
+  :status beacon-mode
+  :on (beacon-mode)
+  :off (beacon-mode -1)
+  :documentation "Never lose your cursor again"
+  :evil-leader "otb")

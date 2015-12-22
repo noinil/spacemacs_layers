@@ -8,6 +8,7 @@
       '(browse-kill-ring
         whitespace
         autoinsert
+        beacon
         evil-visual-mark-mode
         ))
 
@@ -38,5 +39,12 @@
     :defer t
     :config
     (set-face-attribute 'evil-visual-mark-face nil
-                        :foreground "white" :background "dark cyan" :underline nil)
+                        :foreground "white" :background "cyan" :underline nil)
     (setq evil-visual-mark-exclude-marks '("^" "[" "]"))))
+
+(defun ct-editor/init-beacon ()
+  (use-package beacon
+    :init
+    (beacon-mode +1)
+    :config
+    (spacemacs|hide-lighter beacon-mode)))
