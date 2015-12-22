@@ -60,7 +60,7 @@
   (use-package origami
     :defer t
     :init
-    (global-origami-mode +1)
+    (global-origami-mode 1)
     ))
 
 (defun ct-editor/post-init-origami ()
