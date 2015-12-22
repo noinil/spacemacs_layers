@@ -19,3 +19,10 @@
   :off (auto-insert-mode -1)
   :documentation "Auto-insert for newly created files."
   :evil-leader "otA")
+
+(spacemacs|add-toggle evil-visual-mark-mode
+  :status evil-visual-mark-mode
+  :on (evil-visual-mark-mode)
+  :off (evil-visual-mark-mode -1)
+  :documentation "Displays all the evil marks you have registered on a buffe."
+  :evil-leader "otm")
