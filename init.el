@@ -181,7 +181,7 @@
       ;; font-lock-faces
       (font-lock-builtin-face :foreground "#b55353" :weight bold)
       (font-lock-comment-delimiter-face :foreground "#62562c")
-      (font-lock-comment-face :foreground "#61524f" :slant italic)
+      (font-lock-comment-face :foreground "#61524f")
       (font-lock-warning-face :underline nil)
       (font-lock-constant-face :foreground "#6f8bad")
       (font-lock-doc-face :foreground "#5165b8" :slant italic)
@@ -201,6 +201,8 @@
       (font-latex-sectioning-4-face :foreground "Gold")
       (font-latex-sedate-face :foreground "SteelBlue")
       (font-latex-slide-title-face :foreground "DeepSkyBlue")
+      (font-latex-math-face :foreground "LawnGreen")
+      (font-latex-string-face :inherit font-lock-string-face)
 
       ;; mode-line-faces
       (mode-line :box (:color "dark cyan" :line-width 1.2))
