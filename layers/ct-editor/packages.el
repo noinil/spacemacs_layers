@@ -37,4 +37,6 @@
   (use-package evil-visual-mark-mode
     :defer t
     :config
+    (set-face-attribute 'evil-visual-mark-face nil
+                        :foreground "white" :background "dark cyan" :underline nil)
     (setq evil-visual-mark-exclude-marks '("^" "[" "]"))))

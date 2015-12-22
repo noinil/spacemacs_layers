@@ -210,9 +210,9 @@
 
       ;; misc
       (helm-prefarg :foreground "PaleGreen")
+      (helm-source-header :background "dark cyan")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
-      (helm-source-header :background "dark cyan")
       (term :foreground nil :background nil))
 
      (monokai
