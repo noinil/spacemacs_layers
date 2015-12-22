@@ -126,6 +126,10 @@
   (setq-default
    ;; Miscellaneous
 
+   ;; Google Translate
+   google-translate-default-source-language "en"
+   google-translate-default-target-language "zh-CN"
+
    ;; Backups
    auto-save-inteval 600
    auto-save-timeout 300
@@ -137,10 +141,6 @@
 
    ;; Evil
    evil-shift-round nil
-
-   ;; Google Translate
-   google-translate-default-source-language "en"
-   google-translate-default-target-language "zh-CN"
 
    ;; Ranger
    ranger-override-dired t
