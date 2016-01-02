@@ -22,7 +22,15 @@
    '((headline . nil) (item . nil) (table . nil))
    org-directory "~/Org"
    org-cycle-level-faces nil
-   org-agenda-files '("~/Org/anniversary.org" "~/Org/gtd.org" "~/Org/reading.org" "~/Org/journal.org" "~/Org/records.org")
+   org-agenda-files '("~/Org/anniversary.org"
+                      "~/Org/gtd.org"
+                      "~/Org/MOOC.org"
+                      "~/Org/notes.org"
+                      "~/Org/paper.org"
+                      "~/Org/projects.org"
+                      "~/Org/reading.org"
+                      "~/Org/journal.org"
+                      "~/Org/records.org")
    org-archive-location "~/Org/archive.org::* From %s"
    org-babel-load-languages '((ruby . t) (python . t) (emacs-lisp . t))
    org-default-notes-file "~/Org/notes.org"
@@ -41,19 +49,22 @@
    org-capture-templates
    '(("t" "Todo" entry (file+headline "~/Org/gtd.org" "Tasks")
       "* TODO %?\n %i\n"
-      :empty-lines 1)
+      :empty-lines-after 1)
      ("i" "Idea" entry (file+headline "~/Org/notes.org" "Ideas")
       "* %?\n Caught on %T\n %i \n"
-      :empty-lines 1)
+      :empty-lines-after 1)
      ("m" "Movie" entry (file+headline "~/Org/notes.org" "Entertainments")
       "* %?\n Watched on %T\n %i\n"
-      :empty-lines 1)
+      :empty-lines-after 1)
+     ("c" "Music" entry (file+headline "~/Org/notes.org" "Entertainments")
+      "* %?\n Listened on %T\n %i\n"
+      :empty-lines-after 1)
      ("n" "Note" entry (file+headline "~/Org/notes.org" "Notes")
       "* %?\n Taken at %T\n %i\n"
-      :empty-lines 1)
+      :empty-lines-after 1)
      ("j" "Journal" entry (file+datetree "~/Org/journal.org")
       "** %?\n Logged at %T\n %i\n"
-      :empty-lines 1))))
+      :empty-lines-after 1))))
 
 (defun ct-org/pre-init-org-agenda ()
   (setq-default
