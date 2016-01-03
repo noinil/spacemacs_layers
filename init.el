@@ -179,7 +179,7 @@
       (font-lock-string-face :foreground "#0083d9" :slant italic)
       (font-lock-function-name-face :foreground "#408a9c")
       (font-lock-variable-name-face :foreground "#5f995f")
-      (font-lock-keyword-face :foreground "#9d72a8" :weight bold)
+      (font-lock-keyword-face :foreground "DeepSkyBlue" :weight bold)
       (font-lock-negation-char-face :foreground "SlateBlue")
       (font-lock-reference-face :foreground "SlateBlue")
       (font-lock-type-face :foreground "#725da8")
