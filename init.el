@@ -16,7 +16,6 @@
                       auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
-     spacemacs-ivy
      emacs-lisp
      git
      github
