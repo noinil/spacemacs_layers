@@ -39,6 +39,8 @@
  '(isearch ((t (:foreground "green yellow" :weight bold))))
  '(lazy-highlight ((t (:foreground "orange" :weight bold))))
  '(org-agenda-current-time ((t (:foreground "DeepSkyBlue3"))))
+ '(org-agenda-done ((t (:foreground "#86dc2f" :height 1.0))))
+ '(org-scheduled-today ((t (:foreground "Yellow" :height 1.0))))
  '(org-checkbox-statistics-done ((t (:inherit org-done))))
  '(org-checkbox-statistics-todo ((t (:inherit org-todo))))
  '(org-done ((t (:foreground "green yellow" :background nil :weight bold))))
