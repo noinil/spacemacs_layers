@@ -18,8 +18,9 @@
   (use-package browse-kill-ring
     :commands browse-kill-ring
     :init
-    (setq browse-kill-ring-highlight-current-entry t)
-    (setq browse-kill-ring-show-preview t)
+    (progn
+      (setq browse-kill-ring-highlight-current-entry t)
+      (setq browse-kill-ring-show-preview t))
     :config
     (browse-kill-ring-default-keybindings)))
 
@@ -32,17 +33,19 @@
   (use-package autoinsert
     :defer t
     :config
-    (setq auto-insert-directory "~/.spacemacs.d/layers/ct-editor/templates/")
-    (setq auto-insert-query nil)
-    (define-auto-insert "\.py" "ct-python-template.py")))
+    (progn
+      (setq auto-insert-directory "~/.spacemacs.d/layers/ct-editor/templates/")
+      (setq auto-insert-query nil)
+      (define-auto-insert "\.py" "ct-python-template.py"))))
 
 (defun ct-editor/init-evil-visual-mark-mode ()
   (use-package evil-visual-mark-mode
     :defer t
     :config
-    (set-face-attribute 'evil-visual-mark-face nil
-                        :foreground "white" :background "cyan" :underline nil)
-    (setq evil-visual-mark-exclude-marks '("^" "[" "]"))))
+    (progn
+      (set-face-attribute 'evil-visual-mark-face nil
+                          :foreground "white" :background "cyan" :underline nil)
+      (setq evil-visual-mark-exclude-marks '("^" "[" "]")))))
 
 (defun ct-editor/init-beacon ()
   (use-package beacon
