@@ -143,7 +143,7 @@
    evil-shift-round nil
 
    ;; Ranger
-   ranger-override-dired t
+   ranger-override-dired nil
 
    ;; Emacs Lisp
    nameless-global-aliases
