@@ -315,6 +315,10 @@
   (add-hook 'text-mode-hook 'auto-fill-mode)
   (add-hook 'makefile-mode-hook 'whitespace-mode)
   (remove-hook 'prog-mode-hook 'spacemacs//show-trailing-whitespace)
+  (add-hook 'prog-mode-hook
+            (lambda ()
+              (when (> (buffer-size) 100000)
+                (turn-off-show-smartparens-mode))))
 
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
