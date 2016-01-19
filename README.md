@@ -19,6 +19,10 @@ Settings of some basic extensions to Emacs, with the following packages:
 - whitespace
 - auto-insert (with templates)
 
+### ct-dired
+
+Settings for `dired-mode`, including useful features provided by the `dired+` package.
+
 ### ct-erc
 
 Settings to erc, like ignoring stupid messages, and changing erc prompt.
