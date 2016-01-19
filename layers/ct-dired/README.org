@@ -1,0 +1,36 @@
+#+TITLE: ct-dired
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer contains configurations for dired mode, including =dired+=.
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-dired))
+#+end_src
+
+* Key bindings
+
+| Key Binding | Description                   |
+|-------------+-------------------------------|
+| ~n~         | diredp-next-line              |
+| ~p~         | diredp-previous-line          |
+| ~i~         | dired-maybe-insert-subdir     |
+| ~r~         | dired-do-redisplay            |
+| ~y~         | diredp-relsymlink-this-file   |
+| ~z~         | diredp-compress-this-file     |
+| ~A~         | dired-do-search               |
+| ~B~         | dired-do-byte-compile         |
+| ~D~         | dired-do-delete               |
+| ~F~         | dired-do-find-marked-files    |
+| ~L~         | dired-do-load                 |
+| ~Q~         | dired-do-query-replace-regexp |
+| ~Z~         | dired-do-compress             |
+| ~$~         | diredp-hide-subdir-nomove     |
+

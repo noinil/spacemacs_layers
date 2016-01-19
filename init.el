@@ -59,6 +59,7 @@
      ct-editor
      ct-erc
      ct-ibuffer
+     ct-dired
      ct-osx
      ct-org
      )
