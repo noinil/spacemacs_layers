@@ -36,6 +36,7 @@
               theming-headings-same-size 'all
               theming-headings-bold 'all)
      c-c++
+     gtags
      colors
      dash
      erc
@@ -57,6 +58,7 @@
 
      ;; Personal Layers
      ct-editor
+     ct-cpp
      ct-erc
      ct-ibuffer
      ct-dired

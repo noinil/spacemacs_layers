@@ -1,0 +1,27 @@
+#+TITLE: ct-cpp
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer contains configurations for cpp mode.
+
+Most of the settings are copied from:
+https://github.com/chrisbarrett/spacemacs-layers/blob/master/cb-cpp/packages.el
+
+Including settings for the Irony-mode:
+https://github.com/Sarcasm/irony-mode
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-cpp))
+#+end_src
+
+* Key bindings
+
+| Key Binding | Description                   |
+|-------------+-------------------------------|
