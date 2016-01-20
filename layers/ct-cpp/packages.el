@@ -40,6 +40,10 @@
       (add-hook 'irony-mode-hook 'ct-cpp/irony-mode-hook)
       (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))))
 
+(defun ct-cpp/post-init-irony ()
+  (diminish 'irony-mode)
+  )
+
 (defun ct-cpp/init-company-irony ()
   (use-package company-irony
     :if (configuration-layer/package-usedp 'company)
