@@ -326,6 +326,8 @@
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
+  (with-eval-after-load 'helm-gtags
+    (diminish 'helm-gtags-mode))
 
  ;; Additional packages (from TheBB)
   (use-package helm-flycheck
