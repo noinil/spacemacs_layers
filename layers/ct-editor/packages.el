@@ -11,6 +11,7 @@
         beacon
         ;; evil-vimish-fold
         origami
+        keyfreq
         evil-visual-mark-mode
         ))
 
@@ -58,6 +59,13 @@
 ;;   (use-package evil-vimish-fold
 ;;     :init
 ;;     (vimish-fold-global-mode 1)))
+
+(defun ct-editor/init-keyfreq ()
+  (use-package keyfreq
+    :init
+    (progn
+      (keyfreq-mode t)
+      (keyfreq-autosave-mode 1))))
 
 (defun ct-editor/init-origami ()
   (use-package origami
