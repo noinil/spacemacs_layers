@@ -14,8 +14,7 @@
 
 (defun ct-dired/init-dired+ ()
   (use-package dired+
-    ;; pseudo loading...
-    ))
+    :init))
 
 (defun ct-dired/post-init-dired+ ()
   (with-eval-after-load 'dired+
