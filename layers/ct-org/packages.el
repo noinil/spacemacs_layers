@@ -32,7 +32,11 @@
                       "~/Org/journal.org"
                       "~/Org/records.org")
    org-archive-location "~/Org/archive.org::* From %s"
-   org-babel-load-languages '((ruby . t) (python . t) (emacs-lisp . t))
+   org-babel-load-languages '((ditaa . t)
+                              (python . t)
+                              (C . t)
+                              (js . t)
+                              (emacs-lisp . t))
    org-default-notes-file "~/Org/notes.org"
    org-catch-invisible-edits 'show-and-error
    org-list-demote-modify-bullet '(("-" . "*") ("*" . "+") ("+" . "-"))
