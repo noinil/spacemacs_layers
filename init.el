@@ -58,6 +58,7 @@
 
      ;; Personal Layers
      ct-editor
+     ct-elisp
      ct-cpp
      ct-erc
      ct-ibuffer
