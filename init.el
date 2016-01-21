@@ -61,6 +61,7 @@
      ct-elisp
      ct-cpp
      ct-erc
+     ct-helm
      ct-ibuffer
      ct-dired
      ct-osx
@@ -68,8 +69,7 @@
      )
 
    dotspacemacs-additional-packages
-   '(helm-flycheck
-     helm-fuzzier
+   '(
      )
 
    dotspacemacs-excluded-packages
@@ -319,20 +319,7 @@
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
   (with-eval-after-load 'helm-gtags
-    (diminish 'helm-gtags-mode))
-
- ;; Additional packages 
-  (use-package helm-flycheck
-    :defer t
-    :init
-    (spacemacs/set-leader-keys "eh" 'helm-flycheck))
-  (use-package helm-fuzzier
-    :defer t
-    :commands helm-fuzzier-mode
-    :init
-    (with-eval-after-load 'helm
-      (helm-fuzzier-mode 1)))
-  )
+    (diminish 'helm-gtags-mode)))
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)

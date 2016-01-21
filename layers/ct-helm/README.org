@@ -1,0 +1,21 @@
+#+TITLE: ct-helm
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer contains configurations for emacs-helm mode.
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-helm))
+#+end_src
+
+* Key bindings
+
+| Key Binding | Description |
+|-------------+-------------|
