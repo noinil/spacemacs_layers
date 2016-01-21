@@ -69,7 +69,7 @@
    dotspacemacs-additional-packages
    '(helm-flycheck
      helm-fuzzier
-     nameless)
+     )
 
    dotspacemacs-excluded-packages
    '(arduino-mode
@@ -147,15 +147,6 @@
 
    ;; Ranger
    ranger-override-dired nil
-
-   ;; Emacs Lisp
-   nameless-global-aliases
-   '(("sm" . "spacemacs")
-     ("dsm" . "dotspacemacs")
-     ("cfl" . "configuration-layer"))
-   nameless-discover-current-name nil
-   nameless-prefix ""
-   nameless-separator nil
 
    ;; Theme modifications
    spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
@@ -329,7 +320,7 @@
   (with-eval-after-load 'helm-gtags
     (diminish 'helm-gtags-mode))
 
- ;; Additional packages (from TheBB)
+ ;; Additional packages 
   (use-package helm-flycheck
     :defer t
     :init
@@ -340,16 +331,7 @@
     :init
     (with-eval-after-load 'helm
       (helm-fuzzier-mode 1)))
-  (use-package nameless
-    :defer t
-    :init
-    (progn
-      (add-hook 'emacs-lisp-mode-hook 'nameless-mode-from-hook)
-      (spacemacs|add-toggle nameless
-        :status nameless-mode
-        :on (nameless-mode)
-        :off (nameless-mode -1)
-        :evil-leader-for-mode (emacs-lisp-mode . "o:")))))
+  )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)
