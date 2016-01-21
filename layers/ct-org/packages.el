@@ -34,6 +34,9 @@
    org-archive-location "~/Org/archive.org::* From %s"
    org-babel-load-languages '((ditaa . t)
                               (python . t)
+                              (dot . t)
+                              (latex . t)
+                              (sh . t)
                               (C . t)
                               (js . t)
                               (emacs-lisp . t))
