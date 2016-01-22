@@ -5,7 +5,8 @@
 ;;
 
 (defconst ct-elisp-packages
-  '(nameless))
+  '(lispy
+    nameless))
 
 (defun ct-elisp/init-nameless ()
   (use-package nameless
@@ -28,3 +29,16 @@
    nameless-discover-current-name nil
    nameless-prefix ""
    nameless-separator nil))
+
+(defun ct-elisp/init-lispy ()
+  (use-package lispy
+    :defer t
+    :diminish (lispy-mode)
+    :init
+    (progn
+      (add-hook 'lispy-mode-hook 'spacemacs/toggle-aggressive-indent-on)
+      (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+      (add-hook 'spacemacs-mode-hook (lambda () (lispy-mode 1)))
+      (add-hook 'clojure-mode-hook (lambda () (lispy-mode 1)))
+      (add-hook 'scheme-mode-hook (lambda () (lispy-mode 1)))
+      (add-hook 'cider-repl-mode-hook (lambda () (lispy-mode 1))))))
