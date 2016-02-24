@@ -44,6 +44,7 @@
    org-catch-invisible-edits 'show-and-error
    org-list-demote-modify-bullet '(("-" . "*") ("*" . "+") ("+" . "-"))
    org-list-allow-alphabetical t
+   org-image-actual-width 1000
    org-todo-keywords
    '((sequence "TODO(t)" "FEEDBACK(e!)" "VERIFY(j)" "STARTED(g!)" "|" "DONE(d!)")
      (sequence "NEXT(n)" "SPECIFIED(i!)")
