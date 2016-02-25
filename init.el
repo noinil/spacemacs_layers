@@ -130,10 +130,6 @@
   (setq-default
    ;; Miscellaneous
 
-   ;; Google Translate
-   google-translate-default-source-language "en"
-   google-translate-default-target-language "zh-CN"
-
    ;; Backups
    auto-save-inteval 600
    auto-save-timeout 300
@@ -247,7 +243,7 @@
       (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
       (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
 
-     ;; Flycheck
+      ;; Flycheck
       (flycheck-fringe-error :background nil)
       (flycheck-fringe-warning :background nil)
       (flycheck-fringe-info :background nil)
@@ -275,6 +271,10 @@
 
   ;; Variable Definitions
   (setq-default
+   ;; Google Translate
+   google-translate-default-source-language "en"
+   google-translate-default-target-language "zh-CN"
+
    tab-width 4
    spaceline-window-numbers-unicode t
    spaceline-workspace-numbers-unicode t
