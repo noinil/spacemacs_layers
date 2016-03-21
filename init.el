@@ -85,7 +85,7 @@
 
 (defun dotspacemacs/init ()
   (setq-default
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
