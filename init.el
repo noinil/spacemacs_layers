@@ -22,8 +22,8 @@
      markdown
      org
      (shell :variables
-           shell-default-term-shell "/bin/zsh"
-           shell-default-shell 'eshell)
+            shell-default-term-shell "/bin/zsh"
+            shell-default-shell 'eshell)
      (chinese :variables
               chinese-enable-youdao-dict t
               chinese-enable-fcitx nil)
@@ -66,6 +66,7 @@
      ct-dired
      ct-osx
      ct-org
+     ct-cafemol
      )
 
    dotspacemacs-additional-packages
