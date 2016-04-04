@@ -16,10 +16,8 @@
                       auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
-     emacs-lisp
      git
      github
-     markdown
      org
      (shell :variables
             shell-default-term-shell "/bin/zsh"
@@ -36,20 +34,22 @@
               theming-headings-same-size 'all
               theming-headings-bold 'all)
      c-c++
+     emacs-lisp
+     markdown
+     haskell
+     javascript
+     html
+     python
+     ipython-notebook
+     ruby
+     latex
      gtags
      colors
      dash
      erc
-     haskell
-     html
      ibuffer
-     javascript
-     latex
      osx
-     python
-     ipython-notebook
      ranger
-     ruby
      shell-scripts
      smex
      version-control
@@ -91,14 +91,14 @@
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-themes '(spacemacs-dark
-                         monokai
-                         spacemacs-light)
+               monokai
+               spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
-                               :size 13
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.0)
+                     :size 13
+                     :weight normal
+                     :width normal
+                     :powerline-scale 1.0)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
@@ -119,7 +119,7 @@
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
-   dotspacemacs-mode-line-unicode-symbols nil
+   dotspacemacs-mode-line-unicode-symbols t
    dotspacemacs-smooth-scrolling t
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-highlight-delimiters 'all
@@ -279,7 +279,7 @@
    tab-width 4
    spaceline-window-numbers-unicode t
    spaceline-workspace-numbers-unicode t
-   spaceline-hud-p nil
+   spaceline-hud-p t
    sentence-end-double-space t
    powerline-default-separator nil
    x-underline-at-descent-line nil)
