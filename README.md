@@ -10,6 +10,9 @@ Layers in the directory `layers` can be added to the
 `dotspacemacs-configuration-layers` block in your `init.el` or `.spacemacs`
 files.
 
+## Screenshot
+![spacemacs_ct](img/spacemacs-scrot.png)
+
 ## Contents (List of Layers)
 
 ### ct-editor
@@ -18,6 +21,19 @@ Settings of some basic extensions to Emacs, with the following packages:
 - browse-kill-ring
 - whitespace
 - auto-insert (with templates)
+
+### ct-cafemol
+
+Major mode `cafemol-mode`, for editing input files for _CafeMol_ (a
+coarse-grained molecular dynamics simulation package).
+
+### ct-cpp
+
+For `c++-mode`, including settings for `irony-mode`.
+
+### ct-elisp
+
+Settings such as `nameless` and `lispy` for `elisp-mode`.
 
 ### ct-dired
 
