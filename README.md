@@ -11,7 +11,7 @@ Layers in the directory `layers` can be added to the
 files.
 
 ## Screenshot
-![spacemacs_ct](img/spacemacs-scrot.png)
+![spacemacs_ct](img/spacemacs_scrot.png)
 
 ## Contents (List of Layers)
 
