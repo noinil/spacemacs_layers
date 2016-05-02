@@ -36,6 +36,7 @@
                               (python . t)
                               (dot . t)
                               (latex . t)
+                              (ledger . t)
                               (sh . t)
                               (C . t)
                               (js . t)
