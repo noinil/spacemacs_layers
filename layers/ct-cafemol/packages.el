@@ -15,8 +15,6 @@
 
 (defun ct-cafemol/init-cafemol-mode ()
   (use-package cafemol-mode
-    :config
-    (progn
-      (add-to-list 'auto-mode-alist '("\\.inp\\'" . cafemol-mode)))))
+    :mode "\\.inp\\'"))
 
 ;;; packages.el ends here
