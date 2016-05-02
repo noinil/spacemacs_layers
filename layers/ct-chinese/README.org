@@ -1,0 +1,25 @@
+#+TITLE: ct-editor
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer adds some settings to Chinese layer packages.  Mainly for youdao in
+the current stage.
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-chinese))
+#+end_src
+
+* Key bindings
+
+| Key Binding   | Description                        |
+|---------------+------------------------------------|
+| ~<SPC> o y s~ | youdao-dictionary-search-at-point  |
+| ~<SPC> o y S~ | youdao-dictionary-search-at-point+ |
+| ~<f5>~        | youdao-dictionary-search-at-point+ |

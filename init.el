@@ -68,6 +68,7 @@
      ct-osx
      ct-org
      ct-cafemol
+     ct-chinese
      )
 
    dotspacemacs-additional-packages
