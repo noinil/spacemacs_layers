@@ -39,10 +39,8 @@
       (setq auto-insert-query nil)
       (define-auto-insert "\.py" "ct-python-template.py"))))
 
-(defun ct-editor/init-evil-visual-mark-mode ()
-  (use-package evil-visual-mark-mode
-    :defer t
-    :config
+(defun ct-editor/post-init-evil-visual-mark-mode ()
+  (with-eval-after-load 'evil-visual-mark-mode
     (progn
       (set-face-attribute 'evil-visual-mark-face nil
                           :foreground "white" :background "cyan" :underline nil)
@@ -54,11 +52,6 @@
     (beacon-mode -1)
     :config
     (spacemacs|hide-lighter beacon-mode)))
-
-;; (defun ct-editor/init-evil-vimish-fold ()
-;;   (use-package evil-vimish-fold
-;;     :init
-;;     (vimish-fold-global-mode 1)))
 
 (defun ct-editor/init-keyfreq ()
   (use-package keyfreq
