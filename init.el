@@ -55,6 +55,7 @@
      version-control
      extra-langs
      yaml
+     finance
 
      ;; Personal Layers
      ct-editor
