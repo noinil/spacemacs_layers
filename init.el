@@ -280,10 +280,6 @@
 
    ;; tab-width
    tab-width 4
-   c-basic-offset 4
-   c-toggle-hungry-state 1
-   c-toggle-auto-newline -1
-   c-default-style "python"
 
    spaceline-window-numbers-unicode t
    spaceline-workspace-numbers-unicode t

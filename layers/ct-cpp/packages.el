@@ -77,6 +77,7 @@
     :init
     (progn
       (setq-default clang-format-style "Google")
+      (add-hook 'c-mode-common-hook 'google-make-newline-indent)
       (add-hook 'c-mode-common-hook 'google-set-c-style))))
 
 (defun ct-cpp/post-init-ggtags ()
