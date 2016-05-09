@@ -133,6 +133,11 @@
   (setq-default
    ;; Miscellaneous
 
+   ;; tab-width
+   tab-width 4
+   c-basic-offset 4
+   c-default-style "bsd"
+
    ;; Backups
    auto-save-inteval 600
    auto-save-timeout 300
@@ -278,7 +283,6 @@
    google-translate-default-source-language "en"
    google-translate-default-target-language "zh-CN"
 
-   tab-width 4
    spaceline-window-numbers-unicode t
    spaceline-workspace-numbers-unicode t
    spaceline-hud-p t
