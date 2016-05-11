@@ -43,6 +43,7 @@
      ipython-notebook
      ruby
      latex
+     bibtex
      gtags
      colors
      dash
