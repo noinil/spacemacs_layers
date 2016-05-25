@@ -296,9 +296,9 @@
 
   ;; Keybindings
   (ct-define-key evil-normal-state-map
-    "+" 'spacemacs/zoom-frm-in
-    "-" 'spacemacs/zoom-frm-out
-    "_" 'spacemacs/zoom-frm-unzoom
+    (kbd "C-+") 'spacemacs/zoom-frm-in
+    (kbd "C--") 'spacemacs/zoom-frm-out
+    (kbd "C-_") 'spacemacs/zoom-frm-unzoom
     (kbd "C-n") 'evil-next-line-first-non-blank
     (kbd "C-p") 'evil-previous-line-first-non-blank)
 
