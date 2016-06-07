@@ -40,7 +40,7 @@
      javascript
      html
      python
-     ipython-notebook
+     ;; ipython-notebook
      ruby
      latex
      bibtex
