@@ -90,6 +90,7 @@
 (defun dotspacemacs/init ()
   (setq-default
    dotspacemacs-editing-style 'vim
+   dotspacemacs-folding-method 'origami
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
