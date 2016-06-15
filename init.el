@@ -16,7 +16,6 @@
                       auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
-     ivy
      git
      github
      org
@@ -64,6 +63,7 @@
      ct-elisp
      ct-cpp
      ct-erc
+     ct-helm
      ct-ibuffer
      ct-dired
      ct-osx
@@ -110,6 +110,9 @@
    dotspacemacs-remap-Y-to-y$ t
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-use-ido nil
+   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-no-header nil
+   dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-micro-state t
    dotspacemacs-which-key-delay 0.5
    dotspacemacs-which-key-position 'bottom
@@ -201,6 +204,8 @@
       (flycheck-fringe-info :background nil)
 
       ;; misc
+      (helm-prefarg :foreground "PaleGreen")
+      (helm-source-header :background "dark cyan")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
       (term :foreground nil :background nil))
@@ -221,6 +226,7 @@
       (font-lock-string-face :foreground "#1aaeed" :slant italic)
       (font-lock-type-face :foreground "#7aa183")
       (font-lock-variable-name-face :foreground "#b8bfed")
+      (helm-prefarg :foreground "PaleGreen")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
       (web-mode-html-attr-value-face
@@ -317,7 +323,9 @@
 
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
-    (diminish 'hybrid-mode)))
+    (diminish 'hybrid-mode))
+  (with-eval-after-load 'helm-gtags
+    (diminish 'helm-gtags-mode)))
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)

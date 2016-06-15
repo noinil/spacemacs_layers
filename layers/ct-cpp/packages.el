@@ -16,6 +16,7 @@
     aggressive-indent
     google-c-style
     ggtags
+    helm-gtags
     cc-mode))
 
 (defun ct-cpp/init-irony ()
@@ -83,6 +84,9 @@
   (add-hook 'c++-mode-hook 'ggtags-mode)
   (with-eval-after-load 'ggtags
     (set-face-underline 'ggtags-highlight nil)))
+
+(defun ct-cpp/post-init-helm-gtags ()
+  (add-hook 'c++-mode-hook 'helm-gtags-mode))
 
 (defun ct-cpp/post-init-aggressive-indent ()
   (with-eval-after-load 'aggressive-indent
