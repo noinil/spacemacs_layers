@@ -12,10 +12,12 @@
    '((auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior nil
-                      auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
+                      auto-completion-enable-help-tooltip t
+                      ;; auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
                       auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
+     semantic
      git
      github
      org
@@ -33,7 +35,9 @@
               theming-headings-inherit-from-default 'all
               theming-headings-same-size 'all
               theming-headings-bold 'all)
-     c-c++
+     (c-c++ :variables
+            c-c++-enable-clang-support t
+            c-c++-default-mode-for-headers 'c++-mode)
      emacs-lisp
      markdown
      haskell
@@ -267,6 +271,9 @@
   ;; Misc
   (add-hook 'after-save-hook
             'executable-make-buffer-file-executable-if-script-p)
+
+  ;; Auto-completion: company
+  (global-company-mode)
 
   ;; Utility Definitions
   (defun ct-define-key (keymap &rest bindings)
