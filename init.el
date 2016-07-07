@@ -61,6 +61,7 @@
      extra-langs
      yaml
      finance
+     rebox
 
      ;; Personal Layers
      ct-editor
