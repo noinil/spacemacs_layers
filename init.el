@@ -43,6 +43,7 @@
      haskell
      javascript
      html
+     php
      python
      ;; ipython-notebook
      ruby
