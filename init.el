@@ -95,6 +95,7 @@
 
 (defun dotspacemacs/init ()
   (setq-default
+   dotspacemacs-elpa-https nil
    dotspacemacs-editing-style 'vim
    dotspacemacs-folding-method 'origami
    dotspacemacs-verbose-loading t
@@ -115,6 +116,7 @@
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-command-key ":"
    dotspacemacs-remap-Y-to-y$ t
+   dotspacemacs-visual-line-move-text t
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
@@ -132,6 +134,7 @@
    dotspacemacs-mode-line-unicode-symbols t
    dotspacemacs-smooth-scrolling t
    dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smart-closing-parenthesis t
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
@@ -140,6 +143,7 @@
 (defun dotspacemacs/user-init ()
   (setq-default
    ;; Miscellaneous
+   python-shell-interpreter-args "--simple-prompt"
 
    ;; Backups
    auto-save-inteval 600
