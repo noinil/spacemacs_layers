@@ -56,3 +56,7 @@ be of general interest.
 ### ct-osx
 
 The `proced-mode` doesn't work on OS X.  Change to use `vkill` instead.
+
+### ct-maxima
+
+Add support for using maxima in Emacs.
