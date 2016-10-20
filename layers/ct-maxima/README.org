@@ -1,0 +1,22 @@
+#+TITLE: ct-maxima
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer contains configurations for imaxima in Emacs.
+
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-maxima))
+#+end_src
+
+* Key bindings
+
+| Key Binding | Description |
+|-------------+-------------|
