@@ -7,7 +7,7 @@
 (setq ct-org-packages
       '((org :location built-in)
         (org-agenda :location built-in)
-        (org-plus-contrib :step pre)
+        ;; (org-plus-contrib :step pre)
         org-bullets))
 
 (defun ct-org/pre-init-org ()

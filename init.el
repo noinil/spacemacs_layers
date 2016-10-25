@@ -147,7 +147,7 @@
    python-shell-interpreter-args "--simple-prompt"
 
    ;; Backups
-   auto-save-inteval 600
+   auto-save-interval 600
    auto-save-timeout 300
    backup-by-copying t
    delete-old-versions t
