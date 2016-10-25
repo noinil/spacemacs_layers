@@ -76,6 +76,7 @@
       "** %?\n Logged at %T\n %i\n"
       :empty-lines-after 1)))
   (custom-set-faces
+   '(org-document-title ((t (:inherit default :height 1.0 :weight bold))))
    '(org-todo ((t (:foreground "Palevioletred2" :background nil :weight bold))))
    '(org-done ((t (:foreground "green yellow" :background nil :weight bold))))
    '(org-level-1 ((t (:inherit outline-1 :height 1.0 :foreground  "#3399CC" :weight bold))))
@@ -86,15 +87,15 @@
    '(org-level-6 ((t (:inherit outline-3 :height 1.0 :foreground  "#008888"))))
    '(org-level-7 ((t (:inherit outline-3 :height 1.0 :foreground  "#007777"))))
    '(org-level-8 ((t (:inherit outline-3 :height 1.0 :foreground  "#006666"))))
-   '(org-agenda-done ((t (:foreground "SeaGreen" :height 1.0))))
-   '(org-agenda-current-time ((t (:foreground "DeepSkyBlue3"))))
-   '(org-agenda-calendar-event ((t (:foreground "DeepSkyBlue"))))
    '(org-scheduled-today ((t (:foreground "Yellow" :height 1.0))))
+   '(org-scheduled-previously ((t (:foreground "DarkGoldenrod1"))))
    '(org-checkbox-statistics-done ((t (:inherit org-done))))
    '(org-checkbox-statistics-todo ((t (:inherit org-todo))))
-   '(org-scheduled-previously ((t (:foreground "DarkGoldenrod1"))))
    '(org-agenda-date ((t (:foreground "DimGray"))))
    '(org-agenda-date-today ((t (:foreground "DarkGray"))))
+   '(org-agenda-calendar-event ((t (:foreground "DeepSkyBlue"))))
+   '(org-agenda-current-time ((t (:foreground "DeepSkyBlue3"))) t)
+   '(org-agenda-done ((t (:foreground "SeaGreen" :height 1.0))))
    '(org-time-grid ((t (:foreground "light slate gray"))))))
 
 (defun ct-org/pre-init-org-agenda ()

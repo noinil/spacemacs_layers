@@ -25,13 +25,15 @@
    erc-timestamp-format-right "%H:%M"
    erc-nick-uniquifier "_"
    erc-fill-column 120
+   erc-autojoin-delay 15
+   erc-autojoin-timing (quote ident)
    erc-timestamp-right-column 120
    erc-prompt-for-nickserv-password nil
    erc-image-inline-rescale 600
    erc-hide-list '("JOIN" "PART" "QUIT" "NICK")
-   ;; the following line is moved to line 56, after erc loading...
-   ;; erc-prompt (lambda () (concat "$ " (buffer-name) " =~~~>"))
    erc-autoaway-message "Bye!"
+   erc-nick "oinil"
+   erc-prompt-for-nickserv-password nil 
    erc-foolish-content
    '("\\[Github\\].* starred"
      "\\[Github\\].* forked"

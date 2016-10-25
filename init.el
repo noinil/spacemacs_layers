@@ -145,6 +145,7 @@
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
+   exec-path-from-shell-arguments (quote ("-l"))
 
    ;; Backups
    auto-save-interval 600
@@ -294,8 +295,23 @@
    google-translate-default-source-language "en"
    google-translate-default-target-language "zh-CN"
 
-   ;; tab-width
+   ;; calendar
+   calendar-chinese-all-holidays-flag t
+   calendar-chinese-celestial-stem ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"]
+   calendar-chinese-terrestrial-branch ["子" "丑" "寅" "卯" "辰" "巳" "午" "未" "申" "酉" "戌" "亥"]
+   calendar-chinese-location-name "京都"
+   calendar-latitude [35 1 north]
+   calendar-longitude [135 46 east]
+   calendar-week-start-day 1
+
+   ;; editor-misc
+   isearch-allow-scroll t
+   line-spacing 0.2
    tab-width 4
+   ruler-mode-current-column-char 86
+   size-indication-mode t
+   smartparens-global-mode t
+   paradox-github-token t
 
    spaceline-window-numbers-unicode t
    spaceline-workspace-numbers-unicode t
@@ -343,4 +359,42 @@
     (diminish 'helm-gtags-mode)))
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
-(load custom-file 'no-error 'no-message)
+;; (load custom-file 'no-error 'no-message)
+(custom-set-faces
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+ '(erc-input-face ((t (:foreground "green yellow"))))
+ '(erc-my-nick-face ((t (:foreground "lime green" :weight ultra-bold))))
+ '(erc-notice-face ((t (:foreground "#7F9F7F" :weight semi-light))))
+ '(erc-prompt-face ((t (:foreground "yellow1" :weight extra-bold))))
+ '(flycheck-warning ((t (:underline (:color "lime green" :style wave)))))
+ '(info-title-1 ((t (:inherit default :height 1.0 :weight bold))))
+ '(info-title-2 ((t (:inherit default :height 1.0 :weight bold))))
+ '(info-title-3 ((t (:inherit default :height 1.0 :weight bold))))
+ '(info-title-4 ((t (:inherit default :height 1.0 :weight bold))))
+ '(isearch ((t (:foreground "green yellow" :weight bold))))
+ '(lazy-highlight ((t (:foreground "orange" :weight bold))))
+ '(markdown-header-face ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-1 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-2 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-3 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-4 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-5 ((t (:inherit default :height 1.0 :weight bold))))
+ '(markdown-header-face-6 ((t (:inherit default :height 1.0 :weight bold))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "orange red"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "dark orange"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "orange"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "gold"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "yellow"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "chartreuse"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "lawn green"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "spring green"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "green"))))
+ '(rainbow-delimiters-depth-10-face ((t (:foreground "medium spring green"))))
+ '(ruler-mode-column-number ((t (:inherit ruler-mode-default :foreground "#B4CDCD"))))
+ '(ruler-mode-comment-column ((t (:inherit ruler-mode-default :foreground "#CD3700"))))
+ '(ruler-mode-default ((t (:inherit default :background "#1D2D1D" :foreground "seagreen" :box (:line-width 1 :color "#ADFF2F" :style released-button)))))
+ '(ruler-mode-fill-column ((t (:inherit ruler-mode-default :foreground "#CD3700"))))
+ '(ruler-mode-pad ((t (:inherit ruler-mode-default))))
+ '(show-paren-mismatch ((t (:foreground "green yellow" :weight bold))))
+ '(widget-field ((t (:background "dark gray" :foreground "blue3")))))
