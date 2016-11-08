@@ -5,8 +5,9 @@
   (setq-default
 
    dotspacemacs-distribution 'spacemacs
+   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
-   dotspacemacs-delete-orphan-packages t
 
    dotspacemacs-configuration-layers
    '((auto-completion :variables
@@ -47,7 +48,8 @@
      python
      ;; ipython-notebook
      ruby
-     latex
+     (latex :variables
+            latex-enable-folding t)
      bibtex
      gtags
      colors
@@ -80,8 +82,9 @@
      )
 
    dotspacemacs-additional-packages
-   '(
-     )
+   '()
+
+   dotspacemacs-frozen-packages '()
 
    dotspacemacs-excluded-packages
    '(arduino-mode
@@ -92,16 +95,21 @@
      leuven-theme
      qml-mode
      scad-mode
-     stan-mode)))
+     stan-mode)
+   dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
   (setq-default
-   dotspacemacs-elpa-https nil
+   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-subdirectory nil
+   dotspacemacs-check-for-update nil
    dotspacemacs-editing-style 'vim
    dotspacemacs-folding-method 'origami
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents bookmarks projects)
+   dotspacemacs-startup-buffer-responsive t
+   dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(spacemacs-dark
                monokai
                spacemacs-light)
@@ -112,33 +120,36 @@
                      :width normal
                      :powerline-scale 1.0)
    dotspacemacs-leader-key "SPC"
+   dotspacemacs-emacs-command-key "SPC"
+   dotspacemacs-ex-command-key ":"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
-   dotspacemacs-command-key ":"
+   dotspacemacs-distinguish-gui-tab nil
    dotspacemacs-remap-Y-to-y$ t
+   dotspacemacs-retain-visual-state-on-shift t
    dotspacemacs-visual-line-move-text t
    dotspacemacs-auto-save-file-location 'cache
-   dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header nil
    dotspacemacs-helm-position 'bottom
-   dotspacemacs-enable-paste-micro-state t
+   dotspacemacs-enable-paste-transient-state t
    dotspacemacs-which-key-delay 0.5
    dotspacemacs-which-key-position 'bottom
+   dotspacemacs-switch-to-buffer-prefers-purpose nil
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
-   dotspacemacs-active-transparency 90
-   dotspacemacs-inactive-transparency 90
+   dotspacemacs-active-transparency 100
+   dotspacemacs-inactive-transparency 80
    dotspacemacs-mode-line-unicode-symbols t
    dotspacemacs-smooth-scrolling t
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server t
-   dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
+   dotspacemacs-search-tools '("grep")
    dotspacemacs-default-package-repository nil))
 
 (defun dotspacemacs/user-init ()
