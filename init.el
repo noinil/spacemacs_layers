@@ -409,3 +409,10 @@
  '(ruler-mode-pad ((t (:inherit ruler-mode-default))))
  '(show-paren-mismatch ((t (:foreground "green yellow" :weight bold))))
  '(widget-field ((t (:background "dark gray" :foreground "blue3")))))
+
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+  )
