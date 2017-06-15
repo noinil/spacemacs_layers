@@ -41,6 +41,7 @@
             c-c++-default-mode-for-headers 'c++-mode)
      rust
      emacs-lisp
+     common-lisp
      markdown
      haskell
      javascript
