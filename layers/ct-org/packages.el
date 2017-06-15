@@ -41,7 +41,6 @@
                               (sh . t)
                               (C . t)
                               (js . t)
-                              (max . t)
                               (lisp . t)
                               (emacs-lisp . t))
    org-default-notes-file "~/Org/notes.org"
