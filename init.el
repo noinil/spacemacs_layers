@@ -401,7 +401,7 @@
  '(rainbow-delimiters-depth-5-face ((t (:foreground "magenta"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "cyan"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "purple"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "dark blue"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "blue1"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "dark green"))))
  '(rainbow-delimiters-depth-10-face ((t (:foreground "#B4CDCD"))))
  '(ruler-mode-column-number ((t (:inherit ruler-mode-default :foreground "#B4CDCD"))))
