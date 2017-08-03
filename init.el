@@ -51,6 +51,7 @@
      ;; ipython-notebook
      ruby
      (latex :variables
+            latex-build-command "xelatex"
             latex-enable-folding t)
      bibtex
      gtags
