@@ -68,6 +68,7 @@
      yaml
      finance
      rebox
+     octave
 
      ;; Personal Layers
      ct-editor
