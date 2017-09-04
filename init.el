@@ -348,8 +348,10 @@
     (kbd "C-n") 'evil-next-line-first-non-blank
     (kbd "C-p") 'evil-previous-line-first-non-blank)
 
-  ;; (ct-define-key yas-minor-mode-map
-  ;; (kbd "TAB") 'yas-expand)
+  (ct-define-key yas-minor-mode-map
+    ;; (kbd "TAB") 'yas-expand
+    (kbd "C-S-n") 'yas-next-field
+    (kbd "C-S-p") 'yas-prev-field)
 
   ;; File Format Association
   (dolist (e '(("pdb" . text-mode)
