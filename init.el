@@ -61,10 +61,11 @@
      ibuffer
      osx
      ranger
+     chrome
      shell-scripts
      smex
      version-control
-     extra-langs
+     major-modes
      yaml
      finance
      rebox
