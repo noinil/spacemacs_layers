@@ -18,6 +18,7 @@
                       auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
+     helm
      semantic
      git
      github
