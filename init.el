@@ -83,7 +83,7 @@
      ct-org
      ct-cafemol
      ct-chinese
-     ct-maxima
+     ;; ct-maxima
      )
 
    dotspacemacs-additional-packages
