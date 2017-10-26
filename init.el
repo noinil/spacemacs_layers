@@ -337,11 +337,6 @@
    powerline-default-separator nil
    x-underline-at-descent-line nil)
 
-  ;; Chinese font settings
-  (when (configuration-layer/layer-usedp 'chinese)
-    (when (spacemacs/system-is-mac)
-      (spacemacs//set-monospaced-font "Consolas" "Kaiti SC" 13 14)))
-
   ;; Keybindings
   (ct-define-key evil-normal-state-map
     (kbd "C-+") 'spacemacs/zoom-frm-in
