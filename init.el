@@ -136,9 +136,11 @@
    dotspacemacs-retain-visual-state-on-shift t
    dotspacemacs-visual-line-move-text t
    dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-large-file-size 10
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header nil
    dotspacemacs-helm-position 'bottom
+   dotspacemacs-helm-use-fuzzy 'always
    dotspacemacs-enable-paste-transient-state t
    dotspacemacs-which-key-delay 0.5
    dotspacemacs-which-key-position 'bottom
@@ -156,9 +158,14 @@
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("grep")
-   dotspacemacs-default-package-repository nil))
+   dotspacemacs-default-package-repository nil
+   dotspacemacs-frame-title-format "%a@%m"
+   dotspacemacs-pretty-docs nil
+   ))
 
 (defun dotspacemacs/user-init ()
+  (setq configuration-layer--elpa-archives '(("melpa" . "melpa.org/packages/")  
+                            ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
