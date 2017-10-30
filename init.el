@@ -358,7 +358,6 @@
     (push (cons (concat "\\." (car e) "\\'") (cdr e)) auto-mode-alist))
 
   ;; Mode hooks
-  (add-hook 'text-mode-hook 'auto-fill-mode)
   (add-hook 'makefile-mode-hook 'whitespace-mode)
   (remove-hook 'prog-mode-hook 'spacemacs//show-trailing-whitespace)
   (add-hook 'prog-mode-hook
