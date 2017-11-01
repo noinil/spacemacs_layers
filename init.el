@@ -164,8 +164,6 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  (setq configuration-layer--elpa-archives '(("melpa" . "melpa.org/packages/")  
-                            ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
