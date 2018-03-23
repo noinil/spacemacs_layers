@@ -30,7 +30,7 @@
                       "~/Org/projects.org"
                       "~/Org/reading.org"
                       "~/Org/journal.org"
-                      "~/Org/finance.org"
+                      ;; "~/Org/finance.org"
                       "~/Org/records.org")
    org-archive-location "~/Org/archive.org::* From %s"
    org-babel-load-languages '((ditaa . t)
