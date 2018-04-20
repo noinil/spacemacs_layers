@@ -71,6 +71,7 @@
      finance
      rebox
      octave
+     csv
 
      ;; Personal Layers
      ct-editor
