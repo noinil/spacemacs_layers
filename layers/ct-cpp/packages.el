@@ -14,7 +14,7 @@
     irony-eldoc
     flycheck-irony
     aggressive-indent
-    google-c-style
+    ;; google-c-style
     ggtags
     helm-gtags
     cc-mode))

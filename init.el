@@ -157,6 +157,7 @@
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-highlight-delimiters 'all
+   dotspacemacs-enable-server t
    dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("grep")
    dotspacemacs-default-package-repository nil
