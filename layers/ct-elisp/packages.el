@@ -8,17 +8,17 @@
   '(lispy
     nameless))
 
-(defun ct-elisp/init-nameless ()
-  (use-package nameless
-    :defer t
-    :init
-    (progn
-      (add-hook 'emacs-lisp-mode-hook 'nameless-mode-from-hook)
-      (spacemacs|add-toggle nameless
-        :status nameless-mode
-        :on (nameless-mode)
-        :off (nameless-mode -1)
-        :evil-leader-for-mode (emacs-lisp-mode . "o:")))))
+;; (defun ct-elisp/init-nameless ()
+;;   (use-package nameless
+;;     :defer t
+;;     :init
+;;     (progn
+;;       (add-hook 'emacs-lisp-mode-hook 'nameless-mode-from-hook)
+;;       (spacemacs|add-toggle nameless
+;;         :status nameless-mode
+;;         :on (nameless-mode)
+;;         :off (nameless-mode -1)
+;;         :evil-leader-for-mode (emacs-lisp-mode . "o:")))))
 
 (defun ct-elisp/pre-init-nameless ()
   (setq-default

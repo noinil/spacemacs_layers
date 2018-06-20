@@ -38,7 +38,7 @@
                               (dot . t)
                               (latex . t)
                               (ledger . t)
-                              (sh . t)
+                              (shell . t)
                               (C . t)
                               (js . t)
                               (lisp . t)

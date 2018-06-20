@@ -71,14 +71,14 @@
     :defer t
     :init (push 'company-irony-c-headers company-backends-c-mode-common)))
 
-(defun ct-cpp/init-google-c-style ()
-  (use-package google-c-style
-    :commands google-set-c-style
-    :init
-    (progn
-      (setq-default clang-format-style "Google")
-      (add-hook 'c-mode-common-hook 'google-make-newline-indent)
-      (add-hook 'c-mode-common-hook 'google-set-c-style))))
+;; (defun ct-cpp/init-google-c-style ()
+;;   (use-package google-c-style
+;;     :commands google-set-c-style
+;;     :init
+;;     (progn
+;;       (setq-default clang-format-style "Google")
+;;       (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;;       (add-hook 'c-mode-common-hook 'google-set-c-style))))
 
 (defun ct-cpp/post-init-ggtags ()
   (add-hook 'c++-mode-hook 'ggtags-mode)
