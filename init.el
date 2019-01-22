@@ -51,6 +51,8 @@
      python
      ;; ipython-notebook
      ruby
+     perl5
+     perl6
      (latex :variables
             latex-build-command "xelatex"
             latex-enable-folding t)
