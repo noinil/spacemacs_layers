@@ -62,7 +62,7 @@
      dash
      erc
      ibuffer
-     osx
+     ;; osx
      ranger
      chrome
      shell-scripts
@@ -83,8 +83,8 @@
      ct-helm
      ct-ibuffer
      ct-dired
-     ct-osx
-     ct-org
+     ;; ct-osx
+     ;; ct-org
      ct-cafemol
      ct-chinese
      ;; ct-maxima
