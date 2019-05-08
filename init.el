@@ -119,15 +119,15 @@
    dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark
-               monokai
-               spacemacs-light)
+   dotspacemacs-themes '(monokai
+                         spacemacs-dark
+                         spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
-                     :size 13
-                     :weight normal
-                     :width normal
-                     :powerline-scale 1.0)
+                               :size 13
+                               :weight normal
+                               :width normal
+                               :powerline-scale 1.0)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-ex-command-key ":"
