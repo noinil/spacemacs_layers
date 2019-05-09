@@ -82,10 +82,10 @@
      ct-erc
      ct-helm
      ct-ibuffer
-     ct-dired
+     ;;ct-dired
      ct-osx
-     ct-org
-     ct-cafemol
+     ;;ct-org
+     ;;ct-cafemol
      ct-chinese
      ;; ct-maxima
      )
