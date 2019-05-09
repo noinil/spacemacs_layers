@@ -6,7 +6,7 @@
 
 (setq ct-dired-packages
       '(dired
-        dired+))
+        (dired+ :location local)))
 
 (defun ct-dired/post-init-dired ()
   ;; (dired-hide-details-mode 0)
