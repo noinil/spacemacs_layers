@@ -39,7 +39,7 @@
                               (ledger . t)
                               (shell . t)
                               (C . t)
-                              (F90 . t)
+                              (fortran . t)
                               (js . t)
                               (lisp . t)
                               (emacs-lisp . t))

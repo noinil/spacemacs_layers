@@ -123,8 +123,8 @@
                          spacemacs-dark
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Consolas"
-                               :size 13
+   dotspacemacs-default-font '("DejaVu Sans Mono"
+                               :size 26
                                :weight normal
                                :width normal
                                :powerline-scale 1.0)
@@ -154,7 +154,7 @@
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 100
    dotspacemacs-inactive-transparency 80
-   dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling t
    dotspacemacs-smartparens-strict-mode nil
    dotspacemacs-smart-closing-parenthesis nil
