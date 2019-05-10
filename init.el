@@ -123,7 +123,7 @@
                          spacemacs-dark
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("DejaVu Sans Mono"
+   dotspacemacs-default-font '("Consolas"
                                :size 26
                                :weight normal
                                :width normal
