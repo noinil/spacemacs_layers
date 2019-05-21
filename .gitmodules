@@ -4,3 +4,6 @@
 [submodule "layers/ct-dired/local/dired+"]
 	path = layers/ct-dired/local/dired+
 	url = git@github.com:noinil/dired-plus.git
+[submodule "layers/ct-genesis/local/genesis-mode"]
+	path = layers/ct-genesis/local/genesis-mode
+	url = git@github.com:noinil/genesis-mode.git
