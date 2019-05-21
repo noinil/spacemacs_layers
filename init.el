@@ -86,6 +86,7 @@
      ;; ct-osx
      ct-org
      ct-cafemol
+     ct-genesis
      ct-chinese
      ;; ct-maxima
      )
