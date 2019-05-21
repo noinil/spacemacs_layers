@@ -1,3 +1,6 @@
 [submodule "layers/ct-cafemol/local/cafemol-mode"]
 	path = layers/ct-cafemol/local/cafemol-mode
 	url = git@github.com:noinil/cafemol-mode.git
+[submodule "layers/ct-dired/local/dired+"]
+	path = layers/ct-dired/local/dired+
+	url = git@github.com:noinil/dired-plus.git
