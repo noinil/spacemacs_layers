@@ -365,6 +365,7 @@
   ;; File Format Association
   (dolist (e '(("pdb" . text-mode)
                ("gp" . gnuplot-mode)
+               ("fpp" . f90-mode)
                ("C" . c++-mode)
                ("h" . c++-mode)))
     (push (cons (concat "\\." (car e) "\\'") (cdr e)) auto-mode-alist))
