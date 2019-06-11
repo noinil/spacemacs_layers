@@ -15,7 +15,7 @@
 (setq f90-if-indent 2)
 (setq f90-type-indent 2)
 (setq f90-program-indent 2)
-(setq f90-continuation-indent 6)
+(setq f90-continuation-indent 4)
 (setq f90-smart-end 'blink)
 
 (add-hook 'f90-mode-hook '(lambda () (setq fill-column 80)))
