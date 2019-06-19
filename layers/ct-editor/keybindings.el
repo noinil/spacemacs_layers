@@ -40,3 +40,11 @@
   :off (origami-mode -1)
   :documentation "A text folding minor mode for Emacs."
   :evil-leader "oto")
+
+(spacemacs|add-toggle highlight-indent
+  :status highlight-indent-guides-mode
+  :on (highlight-indent-guides-mode)
+  :off (highlight-indent-guides-mode -1)
+  :documentation "Never lose your cursor again."
+  :evil-leader "oti")
+
