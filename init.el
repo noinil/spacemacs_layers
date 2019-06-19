@@ -89,6 +89,7 @@
      ct-genesis
      ct-chinese
      ;; ct-maxima
+     ct-fortran
      )
 
    dotspacemacs-additional-packages
