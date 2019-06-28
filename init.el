@@ -171,7 +171,7 @@
 
 (defun dotspacemacs/user-init ()
   (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
-                           ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
+                                            ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
@@ -194,16 +194,16 @@
 
    ;; Theme modifications
    spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
-                     ("insert" "chartreuse3" (bar . 2))
-                     ("emacs" "SkyBlue2" box)
-                     ("hybrid" "SkyBlue2" (bar . 2))
-                     ("replace" "chocolate" (hbar . 2))
-                     ("evilified" "LightGoldenrod3" box)
-                     ("visual" "gray" (hbar . 2))
-                     ("motion" "dark cyan" box)
-                     ("lisp" "HotPink1" box)
-                     ("iedit" "firebrick1" box)
-                     ("iedit-insert" "firebrick1" (bar . 2)))
+                            ("insert" "chartreuse3" (bar . 2))
+                            ("emacs" "SkyBlue2" box)
+                            ("hybrid" "SkyBlue2" (bar . 2))
+                            ("replace" "chocolate" (hbar . 2))
+                            ("evilified" "LightGoldenrod3" box)
+                            ("visual" "gray" (hbar . 2))
+                            ("motion" "dark cyan" box)
+                            ("lisp" "HotPink1" box)
+                            ("iedit" "firebrick1" box)
+                            ("iedit-insert" "firebrick1" (bar . 2)))
 
    theming-modifications
    '((spacemacs-dark
@@ -258,7 +258,7 @@
       (default :foreground "#b2b2b2")
       (font-lock-builtin-face :foreground "#81a618" :weight bold)
       (font-lock-comment-delimiter-face :foreground "#78766c")
-      (font-lock-comment-face :foreground "#6e684c" :slant italic)
+      (font-lock-comment-face :foreground "#6e684c")
       (font-lock-warning-face :underline nil)
       (font-lock-constant-face :foreground "#e1a7a1")
       (font-lock-doc-face :foreground "#5165b8" :slant italic)
