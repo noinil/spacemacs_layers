@@ -7,6 +7,8 @@
 (setq ct-editor-packages
       '(browse-kill-ring
         whitespace
+        highlight-indentation
+        highlight-indent-guides
         autoinsert
         beacon
         ;; origami
@@ -24,10 +26,40 @@
     :config
     (browse-kill-ring-default-keybindings)))
 
+
 (defun ct-editor/post-init-whitespace ()
   (progn
     (setq whitespace-line-column fill-column) ;; limit line length
     (setq whitespace-style '(face tabs empty trailing lines-tail))))
+
+
+(defun ct-editor/post-init-highlight-indentation ()
+  (with-eval-after-load 'highlight-indentation
+    (setq hilight-indentation-blank-lines t)
+    (set-face-background 'highlight-indentation-face "#393939")
+    (set-face-background 'highlight-indentation-current-column-face "#666666")))
+
+
+(defun ct-editor/init-highlight-indent-guides ()
+  (use-package highlight-indent-guides
+    :commands highlight-indent-guides-mode
+    :init
+    (progn
+      (add-hook 'prog-mode-hook 'highlight-indent-guides-mode))
+    :config
+    (setq highlight-indent-guides-method 'fill)
+    ;; (setq highlight-indent-guides-method 'character)
+    ;; (setq highlight-indent-guides-character ?\|)
+    ))
+(defun ct-editor/post-init-highlight-indent-guides ()
+  (progn
+    ;; (setq highlight-indent-guides-responsive 'top)
+    ;; (setq highlight-indent-guides-delay 0.3)
+    (setq highlight-indent-guides-auto-odd-face-perc 3)
+    (setq highlight-indent-guides-auto-even-face-perc 6)
+    (setq highlight-indent-guides-auto-character-face-perc 10)
+    ))
+
 
 (defun ct-editor/init-autoinsert ()
   (use-package autoinsert

@@ -1,0 +1,22 @@
+#+TITLE: ct- layer
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+This layer provides the major mode for editing =genesis= input files.
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(ct-genesis))
+#+end_src
+
+* Key bindings
+
+| Key Binding   | Description  |
+|---------------+--------------|
+| ~<SPC> x x x~ | Does thing01 |
