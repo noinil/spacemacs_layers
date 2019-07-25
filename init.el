@@ -83,7 +83,7 @@
      ct-helm
      ct-ibuffer
      ct-dired
-     ct-osx
+     ;; ct-osx
      ct-org
      ct-cafemol
      ct-genesis
