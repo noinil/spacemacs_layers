@@ -51,6 +51,7 @@
      python
      ;; ipython-notebook
      ruby
+     julia
      perl5
      perl6
      (latex :variables
@@ -102,7 +103,6 @@
      chinese-pyim
      chinese-wbim
      elfeed-org
-     julia-mode
      leuven-theme
      qml-mode
      scad-mode
