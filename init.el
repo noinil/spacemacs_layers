@@ -50,6 +50,7 @@
      php
      python
      ;; ipython-notebook
+     julia
      ruby
      perl5
      perl6
@@ -102,7 +103,6 @@
      chinese-pyim
      chinese-wbim
      elfeed-org
-     julia-mode
      leuven-theme
      qml-mode
      scad-mode
