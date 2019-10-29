@@ -50,8 +50,9 @@
      php
      python
      ;; ipython-notebook
+     (julia :variables
+            julia-max-block-lookback 5000000)
      ruby
-     julia
      perl5
      perl6
      (latex :variables
