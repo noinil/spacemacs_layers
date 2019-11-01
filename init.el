@@ -20,6 +20,7 @@
      better-defaults
      helm
      semantic
+     lsp
      git
      github
      org
@@ -51,6 +52,10 @@
      python
      ;; ipython-notebook
      (julia :variables
+            lsp-julia-command "julia"
+            lsp-julia-default-environment "~/.julia/environments/v1.1"
+            julia-mode-enable-lsp t
+            julia-mode-enable-ess nil
             julia-max-block-lookback 5000000)
      ruby
      perl5
