@@ -14,11 +14,12 @@
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior nil
                       auto-completion-enable-help-tooltip t
-                      ;; auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
+                      auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
                       auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
-     helm
+     ;; helm
+     (ivy :variables ivy-enable-advanced-buffer-information t)
      semantic
      lsp
      git
@@ -87,7 +88,7 @@
      ct-elisp
      ct-cpp
      ct-erc
-     ct-helm
+     ;; ct-helm
      ct-ibuffer
      ct-dired
      ;; ct-osx
@@ -148,10 +149,10 @@
    dotspacemacs-visual-line-move-text t
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-large-file-size 10
-   dotspacemacs-helm-resize nil
-   dotspacemacs-helm-no-header nil
-   dotspacemacs-helm-position 'bottom
-   dotspacemacs-helm-use-fuzzy 'always
+   ;; dotspacemacs-helm-resize nil
+   ;; dotspacemacs-helm-no-header nil
+   ;; dotspacemacs-helm-position 'bottom
+   ;; dotspacemacs-helm-use-fuzzy 'always
    dotspacemacs-enable-paste-transient-state t
    dotspacemacs-which-key-delay 0.5
    dotspacemacs-which-key-position 'bottom
@@ -197,6 +198,9 @@
 
    ;; Ranger
    ranger-override-dired nil
+
+   ;; ivy
+   ivy-wrap t
 
    ;; Theme modifications
    spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
@@ -253,8 +257,8 @@
       (flycheck-fringe-info :background nil)
 
       ;; misc
-      (helm-prefarg :foreground "PaleGreen")
-      (helm-source-header :background "dark cyan")
+      ;; (helm-prefarg :foreground "PaleGreen")
+      ;; (helm-source-header :background "dark cyan")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
       (term :foreground nil :background nil))
@@ -275,7 +279,7 @@
       (font-lock-string-face :foreground "#1aaeed" :slant italic)
       (font-lock-type-face :foreground "#7aa183")
       (font-lock-variable-name-face :foreground "#b8bfed")
-      (helm-prefarg :foreground "PaleGreen")
+      ;; (helm-prefarg :foreground "PaleGreen")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
       (web-mode-html-attr-value-face
@@ -388,8 +392,9 @@
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
-  (with-eval-after-load 'helm-gtags
-    (diminish 'helm-gtags-mode)))
+  ;; (with-eval-after-load 'helm-gtags
+  ;; (diminish 'helm-gtags-mode))
+  )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 ;; (load custom-file 'no-error 'no-message)
