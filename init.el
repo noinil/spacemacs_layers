@@ -20,7 +20,7 @@
      better-defaults
      helm
      semantic
-     lsp
+     ;; lsp
      git
      github
      org
