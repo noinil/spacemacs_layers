@@ -15,7 +15,7 @@
                       auto-completion-tab-key-behavior nil
                       auto-completion-enable-help-tooltip t
                       ;; auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
-                      auto-completion-enable-snippets-in-popup nil
+                      ;; auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
      ;; helm
@@ -356,6 +356,13 @@
    powerline-default-separator nil
    x-underline-at-descent-line nil)
 
+  ;; Yasnippet
+  (setq yas-snippet-dirs
+        '("~/.spacemacs.d/snippets/"
+          yasnippet-snippets-dir
+          ))
+  (yas-global-mode 1)
+
   ;; Keybindings
   (ct-define-key evil-normal-state-map
     (kbd "C-+") 'spacemacs/zoom-frm-in
@@ -388,7 +395,7 @@
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
-)
+  )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 ;; (load custom-file 'no-error 'no-message)
