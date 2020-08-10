@@ -21,7 +21,7 @@
      ;; helm
      (ivy :variables ivy-enable-advanced-buffer-information t)
      semantic
-     lsp
+     ;; lsp
      git
      github
      org
@@ -359,6 +359,13 @@
    sentence-end-double-space t
    powerline-default-separator nil
    x-underline-at-descent-line nil)
+
+  ;; yasnippet
+  (setq yas-snippet-dirs
+        '("~/.spacemacs.d/snippets/"
+          yasnippet-snippets-dir
+          ))
+  (yas-global-mode 1)
 
   ;; Keybindings
   (ct-define-key evil-normal-state-map
