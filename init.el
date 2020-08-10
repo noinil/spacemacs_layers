@@ -15,12 +15,12 @@
                       auto-completion-tab-key-behavior nil
                       auto-completion-enable-help-tooltip t
                       ;; auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
-                      auto-completion-enable-snippets-in-popup nil
+                      ;; auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
-     helm
+     ;; helm
      semantic
-     lsp
+     ;; lsp
      git
      github
      org
@@ -87,7 +87,7 @@
      ct-elisp
      ct-cpp
      ct-erc
-     ct-helm
+     ;; ct-helm
      ct-ibuffer
      ct-dired
      ct-osx
@@ -148,10 +148,10 @@
    dotspacemacs-visual-line-move-text t
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-large-file-size 10
-   dotspacemacs-helm-resize nil
-   dotspacemacs-helm-no-header nil
-   dotspacemacs-helm-position 'bottom
-   dotspacemacs-helm-use-fuzzy 'always
+   ;; dotspacemacs-helm-resize nil
+   ;; dotspacemacs-helm-no-header nil
+   ;; dotspacemacs-helm-position 'bottom
+   ;; dotspacemacs-helm-use-fuzzy 'always
    dotspacemacs-enable-paste-transient-state t
    dotspacemacs-which-key-delay 0.5
    dotspacemacs-which-key-position 'bottom
@@ -253,8 +253,8 @@
       (flycheck-fringe-info :background nil)
 
       ;; misc
-      (helm-prefarg :foreground "PaleGreen")
-      (helm-source-header :background "dark cyan")
+      ;; (helm-prefarg :foreground "PaleGreen")
+      ;; (helm-source-header :background "dark cyan")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
       (term :foreground nil :background nil))
@@ -275,7 +275,7 @@
       (font-lock-string-face :foreground "#1aaeed" :slant italic)
       (font-lock-type-face :foreground "#7aa183")
       (font-lock-variable-name-face :foreground "#b8bfed")
-      (helm-prefarg :foreground "PaleGreen")
+      ;; (helm-prefarg :foreground "PaleGreen")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
       (web-mode-html-attr-value-face
@@ -356,6 +356,13 @@
    powerline-default-separator nil
    x-underline-at-descent-line nil)
 
+  ;; Yasnippet
+  (setq yas-snippet-dirs
+        '("~/.spacemacs.d/snippets/"
+          yasnippet-snippets-dir
+          ))
+  (yas-global-mode 1)
+
   ;; Keybindings
   (ct-define-key evil-normal-state-map
     (kbd "C-+") 'spacemacs/zoom-frm-in
@@ -388,8 +395,7 @@
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
-  (with-eval-after-load 'helm-gtags
-    (diminish 'helm-gtags-mode)))
+  )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 ;; (load custom-file 'no-error 'no-message)
