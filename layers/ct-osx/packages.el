@@ -4,8 +4,5 @@
 ;; Email:  noinil@gmail.com
 ;;
 
-(setq ct-osx-packages '(vkill))
+(setq ct-osx-packages '())
 
-(defun ct-osx/init-vkill ()
-  (use-package vkill
-    :commands (vkill list-unix-processes)))
