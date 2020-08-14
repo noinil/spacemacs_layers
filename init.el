@@ -92,7 +92,8 @@
      ;;ct-dired
      ct-osx
      ;;ct-org
-     ;;ct-cafemol
+     ct-cafemol
+     ct-genesis
      ct-chinese
      ;; ct-maxima
      ct-fortran
