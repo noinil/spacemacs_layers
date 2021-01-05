@@ -91,7 +91,7 @@
      ct-ibuffer
      ;;ct-dired
      ct-osx
-     ;;ct-org
+     ct-org
      ct-cafemol
      ct-genesis
      ct-chinese
