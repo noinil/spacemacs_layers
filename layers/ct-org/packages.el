@@ -25,6 +25,7 @@
    org-agenda-files '("~/Org/life.org"
                       "~/Org/work.org"
                       "~/Org/wiki.org"
+                      "~/Org/notes/work/04_meeting/meetings.org"
                       "~/Org/notes/work/05_projects/projects.org")
    org-archive-location "~/Org/archive.org::* From %s"
    org-babel-load-languages '((ditaa . t)
