@@ -18,12 +18,13 @@
                       ;; auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
-     ;; helm
      semantic
      ;; lsp
      git
      github
-     org
+     (org :variables
+          org-enable-bootstrap-support t
+          org-enable-org-journal-support t)
      (shell :variables
             shell-default-term-shell "/bin/zsh"
             shell-default-shell 'eshell)
@@ -50,7 +51,6 @@
      html
      php
      python
-     ;; ipython-notebook
      (julia :variables
             lsp-julia-command "julia"
             lsp-julia-default-environment "~/.julia/environments/v1.1"
@@ -339,6 +339,17 @@
    calendar-latitude [35 1 north]
    calendar-longitude [135 46 east]
    calendar-week-start-day 1
+
+   ;; org-mode
+   org-journal-dir "~/Org/journal/"
+   org-journal-file-format "%Y-%m-%d"
+   org-journal-date-prefix "#+TITLE: "
+   org-journal-date-format "%A, %B %d %Y"
+   org-journal-time-prefix "* "
+   org-journal-time-format ""
+   org-superstar-headline-bullets-list '("◉" "○" "✸" "◻" "❀" "✡")
+   org-superstar-cycle-headline-bullets nil
+   org-superstar-special-todo-items nil
 
    ;; editor-misc
    isearch-allow-scroll t
