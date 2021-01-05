@@ -25,6 +25,7 @@
    org-agenda-files '("~/Org/life.org"
                       "~/Org/work.org"
                       "~/Org/wiki.org"
+                      "~/Org/notes/work/04_meeting/meetings.org"
                       "~/Org/notes/work/05_projects/projects.org")
    org-archive-location "~/Org/archive.org::* From %s"
    org-babel-load-languages '((ditaa . t)
@@ -76,14 +77,14 @@
    '(org-document-title ((t (:inherit default :height 1.0 :weight bold))))
    '(org-todo ((t (:foreground "Palevioletred2" :background nil :weight bold))))
    '(org-done ((t (:foreground "green yellow" :background nil :weight bold))))
-   '(org-level-8 ((t (:inherit default :height 1.0 :foreground "#006666"))))
-   '(org-level-7 ((t (:inherit org-level-8 :height 1.0 :foreground "#007777"))))
-   '(org-level-6 ((t (:inherit org-level-8 :height 1.0 :foreground "#008888"))))
-   '(org-level-5 ((t (:inherit org-level-8 :height 1.0 :foreground "#009988"))))
-   '(org-level-4 ((t (:inherit org-level-8 :height 1.0 :foreground "#009999"))))
-   '(org-level-3 ((t (:inherit org-level-8 :height 1.0 :foreground "#1199AA"))))
-   '(org-level-2 ((t (:inherit org-level-8 :height 1.0 :foreground "#2299BB" :weight bold))))
-   '(org-level-1 ((t (:inherit org-level-8 :height 1.0 :foreground "#3399CC" :weight bold))))
+   '(org-level-8 ((t (:inherit default :height 1.0 :foreground "#98C1D9"))))
+   '(org-level-7 ((t (:inherit org-level-8 :height 1.0 :foreground "#577590"))))
+   '(org-level-6 ((t (:inherit org-level-8 :height 1.0 :foreground "#43AA8B"))))
+   '(org-level-5 ((t (:inherit org-level-8 :height 1.0 :foreground "#90BE6D"))))
+   '(org-level-4 ((t (:inherit org-level-8 :height 1.0 :foreground "#F9c74F"))))
+   '(org-level-3 ((t (:inherit org-level-8 :height 1.0 :foreground "#F8961E"))))
+   '(org-level-2 ((t (:inherit org-level-8 :height 1.0 :foreground "#F3722C" :weight bold))))
+   '(org-level-1 ((t (:inherit org-level-8 :height 1.0 :foreground "#F94144" :weight bold))))
    '(org-scheduled-today ((t (:foreground "Yellow" :height 1.0))))
    '(org-scheduled-previously ((t (:foreground "DarkGoldenrod1"))))
    '(org-checkbox-statistics-done ((t (:inherit org-done))))
