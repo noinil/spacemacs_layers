@@ -28,6 +28,7 @@
                       "~/Org/notes/work/02_paper/papers.org"
                       "~/Org/notes/work/04_meeting/meetings.org"
                       "~/Org/notes/work/05_projects/projects.org"
+                      "~/Org/notes/work/06_discussions/discussions.org"
                       "~/Org/notes/wiki/00_reading/literature.org"
                       )
    org-archive-location "~/Org/archive.org::* From %s"
