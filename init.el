@@ -14,17 +14,17 @@
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior nil
                       auto-completion-enable-help-tooltip t
-                      auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
-                      auto-completion-enable-snippets-in-popup nil
+                      ;; auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
+                      ;; auto-completion-enable-snippets-in-popup nil
                       :disabled-for erc)
      better-defaults
-     ;; helm
-     (ivy :variables ivy-enable-advanced-buffer-information t)
      semantic
      ;; lsp
      git
      github
-     org
+     (org :variables
+          org-enable-bootstrap-support t
+          org-enable-org-journal-support t)
      (shell :variables
             shell-default-term-shell "/bin/zsh"
             shell-default-shell 'eshell)
@@ -51,10 +51,9 @@
      html
      php
      python
-     ;; ipython-notebook
      (julia :variables
             lsp-julia-command "julia"
-            lsp-julia-default-environment "~/.julia/environments/v1.2"
+            lsp-julia-default-environment "~/.julia/environments/v1.1"
             julia-mode-enable-lsp t
             julia-mode-enable-ess nil
             julia-max-block-lookback 5000000)
@@ -344,6 +343,17 @@
    calendar-longitude [135 46 east]
    calendar-week-start-day 1
 
+   ;; org-mode
+   org-journal-dir "~/Org/journal/"
+   org-journal-file-format "%Y-%m-%d"
+   org-journal-date-prefix "#+TITLE: "
+   org-journal-date-format "%A, %B %d %Y"
+   org-journal-time-prefix "* "
+   org-journal-time-format ""
+   org-superstar-headline-bullets-list '("◉" "○" "✸" "◻" "❀" "✡")
+   org-superstar-cycle-headline-bullets nil
+   org-superstar-special-todo-items nil
+
    ;; editor-misc
    isearch-allow-scroll t
    line-spacing 0.2
@@ -360,7 +370,7 @@
    powerline-default-separator nil
    x-underline-at-descent-line nil)
 
-  ;; yasnippet
+  ;; Yasnippet
   (setq yas-snippet-dirs
         '("~/.spacemacs.d/snippets/"
           yasnippet-snippets-dir
@@ -399,8 +409,6 @@
   ;; Diminish
   (when (eq 'hybrid dotspacemacs-editing-style)
     (diminish 'hybrid-mode))
-  ;; (with-eval-after-load 'helm-gtags
-  ;; (diminish 'helm-gtags-mode))
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
