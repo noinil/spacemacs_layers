@@ -29,6 +29,7 @@
                       "~/Org/notes/work/04_meeting/meetings.org"
                       "~/Org/notes/work/05_projects/projects.org"
                       "~/Org/notes/work/06_discussions/discussions.org"
+                      "~/Org/notes/wiki/00_reading/books.org"
                       "~/Org/notes/wiki/00_reading/literature.org"
                       "~/Org/notes/wiki/01_courses/courses.org"
                       )
