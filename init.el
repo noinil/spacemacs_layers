@@ -350,7 +350,7 @@
    org-journal-date-format "%A, %B %d %Y"
    org-journal-time-prefix "* "
    org-journal-time-format ""
-   org-superstar-headline-bullets-list '("◉" "○" "✸" "◻" "❀" "✡")
+   org-superstar-headline-bullets-list '("α" "β" "γ" "δ" "ε" "ζ" "η" "θ" "ı" "κ" "λ" "μ" "ν" "ξ" "ο" "π" "ρ" "σ" "τ" "υ" "ϕ" "χ" "ψ" "ω")
    org-superstar-cycle-headline-bullets nil
    org-superstar-special-todo-items nil
 
