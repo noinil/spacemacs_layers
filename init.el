@@ -124,7 +124,6 @@
    dotspacemacs-folding-method 'origami
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner nil
-   dotspacemacs-startup-lists '(recents bookmarks projects)
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai
