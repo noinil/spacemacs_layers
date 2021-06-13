@@ -49,6 +49,7 @@
      haskell
      javascript
      html
+     perl5
      php
      python
      (julia :variables
@@ -58,8 +59,6 @@
             julia-mode-enable-ess nil
             julia-max-block-lookback 5000000)
      ruby
-     perl5
-     perl6
      (latex :variables
             latex-build-command "xelatex"
             latex-enable-folding t)
@@ -109,6 +108,7 @@
      chinese-pyim
      chinese-wbim
      elfeed-org
+     org-contrib
      leuven-theme
      qml-mode
      scad-mode

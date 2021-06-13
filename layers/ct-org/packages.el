@@ -58,25 +58,20 @@
    ;; org-refile-targets
    ;; '(("~/Org/someday.org" :maxlevel . 2)
    ;; ("~/Org/gtd.org" :maxlevel . 2))
+   org-format-latex-options
+      '(:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
+		                     ("begin" "$1" "$" "$$" "\\(" "\\["))
    org-capture-templates
-   '(("t" "Todo" entry (file+headline "~/Org/gtd.org" "Tasks")
+   '(("t" "Todo" entry (file+headline "~/Org/notes/misc/gtd.org" "Tasks")
       "* TODO %?\n %i\n"
       :empty-lines-after 1)
-     ("i" "Idea" entry (file+headline "~/Org/misc.org" "Ideas")
+     ("i" "Idea" entry (file+headline "~/Org/notes/misc/ideas.org" "Ideas")
       "* %?\n Caught on %T\n %i \n"
       :empty-lines-after 1)
-     ("m" "Movie" entry (file+headline "~/Org/notes.org" "Entertainments")
-      "* %?\n Watched on %T\n %i\n"
-      :empty-lines-after 1)
-     ("c" "Music" entry (file+headline "~/Org/notes.org" "Entertainments")
-      "* %?\n Listened on %T\n %i\n"
-      :empty-lines-after 1)
-     ("n" "Note" entry (file+headline "~/Org/notes.org" "Notes")
+     ("n" "Note" entry (file+headline "~/Org/notes/misc/notes.org" "Notes")
       "* %?\n Taken at %T\n %i\n"
       :empty-lines-after 1)
-     ("j" "Journal" entry (file+datetree "~/Org/journal.org")
-      "** %?\n Logged at %T\n %i\n"
-      :empty-lines-after 1))))
+     )))
 
 (defun ct-org/post-init-org ()
   (custom-set-faces
@@ -100,7 +95,8 @@
    '(org-agenda-calendar-event ((t (:foreground "DeepSkyBlue"))))
    '(org-agenda-current-time ((t (:foreground "DeepSkyBlue3"))) t)
    '(org-agenda-done ((t (:foreground "SeaGreen" :height 1.0))))
-   '(org-time-grid ((t (:foreground "light slate gray"))))))
+   '(org-time-grid ((t (:foreground "light slate gray")))))
+)
 
 (defun ct-org/pre-init-org-agenda ()
   (setq-default
