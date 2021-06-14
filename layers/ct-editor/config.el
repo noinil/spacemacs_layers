@@ -15,7 +15,7 @@
     ;; |_|
 
     ;; email
-    ("2me" "noinil@gmail.com")
+    ("2me" "i@c-tan.com")
 
     ;; signature
     ("2ct" "Cheng Tan")
@@ -45,9 +45,7 @@
     ("3tn" "\033[0m")
 
     ;; url
-    ("3uct" "http://oinil.blogspot.com/")
-    ("3uctb" "http://oinil.wordpress.com/")
-    ("3karu" "http://www.karuishi.com/")
+    ("3uct" "https://c-tan.com/")
     ;; =========================================================================
 
     ;; normal english ==========================================================
@@ -72,6 +70,7 @@
     ;;    \_/\_/  \___/|_| \_\_|\_\
     ;;
     ;; math/unicode symbols
+    ("6times" "×")
     ("6in" "∈")
     ("6nin" "∉")
     ("6inf" "∞")
