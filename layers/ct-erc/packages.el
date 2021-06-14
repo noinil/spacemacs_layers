@@ -6,9 +6,9 @@
 ;;
 
 (setq ct-erc-packages
-    '(erc
-      persp-mode
-      ))
+      '(erc
+        ;; persp-mode
+        ))
 
 (defun ct-erc/pre-init-erc ()
   (setq-default
@@ -63,5 +63,5 @@
     (setq-default erc-prompt (lambda () (concat "$ " (buffer-name) " =~~~>")))
     (erc-track-mode -1)))
 
-(defun ct-erc/post-init-persp-mode ()
-  (add-hook 'erc-mode-hook 'ct/add-buffer-to-erc-persp))
+;; (defun ct-erc/post-init-persp-mode ()
+;;   (add-hook 'erc-mode-hook 'ct/add-buffer-to-erc-persp))
