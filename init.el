@@ -99,7 +99,7 @@
      )
 
    dotspacemacs-additional-packages
-   '()
+   '(math-symbols)
 
    dotspacemacs-frozen-packages '()
 
