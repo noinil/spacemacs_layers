@@ -41,7 +41,6 @@
                               (ledger . t)
                               (shell . t)
                               (C . t)
-                              (fortran . t)
                               (js . t)
                               (lisp . t)
                               (emacs-lisp . t))
@@ -65,6 +64,12 @@
       :empty-lines-after 1)
      ("i" "Idea" entry (file+headline "~/Org/misc.org" "Ideas")
       "* %?\n Caught on %T\n %i \n"
+      :empty-lines-after 1)
+     ("m" "Movie" entry (file+headline "~/Org/notes.org" "Entertainments")
+      "* %?\n Watched on %T\n %i\n"
+      :empty-lines-after 1)
+     ("c" "Music" entry (file+headline "~/Org/notes.org" "Entertainments")
+      "* %?\n Listened on %T\n %i\n"
       :empty-lines-after 1)
      ("n" "Note" entry (file+headline "~/Org/notes.org" "Notes")
       "* %?\n Taken at %T\n %i\n"
