@@ -45,6 +45,13 @@
   :status highlight-indent-guides-mode
   :on (highlight-indent-guides-mode)
   :off (highlight-indent-guides-mode -1)
-  :documentation "Never lose your cursor again."
+  :documentation "Highlight the indentation more and more."
   :evil-leader "oti")
+
+(spacemacs|add-toggle undo-tree
+  :status undo-tree-mode
+  :on (undo-tree-mode)
+  :off (undo-tree-mode -1)
+  :documentation "Undo tree is useful!"
+  :evil-leader "otu")
 
