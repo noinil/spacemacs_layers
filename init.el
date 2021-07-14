@@ -109,6 +109,7 @@
      chinese-pyim
      chinese-wbim
      elfeed-org
+     org-contrib
      leuven-theme
      qml-mode
      scad-mode
