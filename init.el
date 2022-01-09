@@ -176,8 +176,10 @@
    ))
 
 (defun dotspacemacs/user-init ()
+  ;; (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
+  ;; ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
   (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
-                           ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
+                                            ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
@@ -200,16 +202,16 @@
 
    ;; Theme modifications
    spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
-                     ("insert" "chartreuse3" (bar . 2))
-                     ("emacs" "SkyBlue2" box)
-                     ("hybrid" "SkyBlue2" (bar . 2))
-                     ("replace" "chocolate" (hbar . 2))
-                     ("evilified" "LightGoldenrod3" box)
-                     ("visual" "gray" (hbar . 2))
-                     ("motion" "dark cyan" box)
-                     ("lisp" "HotPink1" box)
-                     ("iedit" "firebrick1" box)
-                     ("iedit-insert" "firebrick1" (bar . 2)))
+                            ("insert" "chartreuse3" (bar . 2))
+                            ("emacs" "SkyBlue2" box)
+                            ("hybrid" "SkyBlue2" (bar . 2))
+                            ("replace" "chocolate" (hbar . 2))
+                            ("evilified" "LightGoldenrod3" box)
+                            ("visual" "gray" (hbar . 2))
+                            ("motion" "dark cyan" box)
+                            ("lisp" "HotPink1" box)
+                            ("iedit" "firebrick1" box)
+                            ("iedit-insert" "firebrick1" (bar . 2)))
 
    theming-modifications
    '((spacemacs-dark
@@ -370,7 +372,7 @@
   ;; Yasnippet
   (setq yas-snippet-dirs
         '("~/.spacemacs.d/snippets/"
-          yasnippet-snippets-dir
+          ;; yasnippet-snippets-dir
           ))
   (yas-global-mode 1)
 
