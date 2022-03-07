@@ -176,8 +176,8 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
-                                            ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
+  (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")
+                                            ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
@@ -199,7 +199,7 @@
    ranger-override-dired nil
 
    ;; ivy
-   ivy-wrap t
+   ;; ivy-wrap t
 
    ;; Theme modifications
    spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
@@ -373,7 +373,7 @@
   ;; Yasnippet
   (setq yas-snippet-dirs
         '("~/.spacemacs.d/snippets/"
-          yasnippet-snippets-dir
+          ;; yasnippet-snippets-dir
           ))
   (yas-global-mode 1)
 
