@@ -21,7 +21,7 @@
      semantic
      ;; lsp
      git
-     github
+     ;; github
      (org :variables
           org-enable-bootstrap-support t
           org-enable-org-journal-support t)
@@ -360,7 +360,7 @@
    ruler-mode-current-column-char 86
    size-indication-mode t
    smartparens-global-mode t
-   paradox-github-token t
+   ;; paradox-github-token t
 
    spaceline-window-numbers-unicode t
    spaceline-workspace-numbers-unicode t
