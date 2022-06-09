@@ -68,7 +68,7 @@
      dash
      erc
      ibuffer
-     osx
+     ;; osx
      ranger
      chrome
      shell-scripts
@@ -89,7 +89,7 @@
      ;; ct-helm
      ct-ibuffer
      ct-dired
-     ct-osx
+     ;; ct-osx
      ct-org
      ct-cafemol
      ct-genesis
@@ -131,8 +131,8 @@
                          monokai
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Consolas"
-                               :size 13
+   dotspacemacs-default-font '("DejaVuSansMono"
+                               :size 12
                                :weight normal
                                :width normal
                                :powerline-scale 1.0)
@@ -196,6 +196,9 @@
 
    ;; Evil
    evil-shift-round nil
+
+   ;; cnfonts
+   cnfonts-mode 1
 
    ;; Ranger
    ranger-override-dired nil
