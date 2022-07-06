@@ -58,8 +58,6 @@
             julia-mode-enable-ess nil
             julia-max-block-lookback 5000000)
      ruby
-     perl5
-     perl6
      (latex :variables
             latex-build-command "xelatex"
             latex-enable-folding t)
@@ -110,6 +108,7 @@
      chinese-wbim
      elfeed-org
      org-contrib
+     org-ledger
      leuven-theme
      qml-mode
      scad-mode
