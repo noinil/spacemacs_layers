@@ -62,7 +62,7 @@
             latex-build-command "xelatex"
             latex-enable-folding t)
      bibtex
-     gtags
+     ;; gtags
      colors
      dash
      erc
@@ -108,7 +108,7 @@
      chinese-wbim
      elfeed-org
      org-contrib
-     org-ledger
+     ;; org-ledger
      leuven-theme
      qml-mode
      scad-mode
