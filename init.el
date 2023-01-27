@@ -67,7 +67,6 @@
      dash
      erc
      ibuffer
-     ;; osx
      ranger
      chrome
      shell-scripts
@@ -88,7 +87,6 @@
      ;; ct-helm
      ct-ibuffer
      ct-dired
-     ;; ct-osx
      ct-org
      ct-cafemol
      ct-genesis
@@ -126,8 +124,8 @@
    dotspacemacs-startup-banner nil
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(monokai
-                         spacemacs-dark
+   dotspacemacs-themes '(spacemacs-dark
+			 monokai
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Consolas"
@@ -175,8 +173,9 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")
-                                            ("gnu" . "elpa.gnu.org/packages/")))
+  (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")))
+  ;; (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")
+  ;;                                           ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
