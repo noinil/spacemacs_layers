@@ -26,6 +26,6 @@
 
 ;; 中英文对齐设置
 (defun ct-chinese/post-init-cnfonts ()
-  (cnfonts-set-spacemacs-fallback-fonts)
+  ;; (cnfonts-set-spacemacs-fallback-fonts)
   (setq cnfonts-profiles
         '("program" "org-mode" "read-book")))
