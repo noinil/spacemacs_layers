@@ -1,6 +1,7 @@
 # Compiled
 *.elc
 custom.el
+.spacemacs.env
 
 # Packaging
 .cask
