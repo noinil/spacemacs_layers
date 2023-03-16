@@ -131,7 +131,7 @@
                          monokai
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Consolas"
+   dotspacemacs-default-font '("Menlo"
                                :size 13
                                :weight normal
                                :width normal
