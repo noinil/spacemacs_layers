@@ -5,8 +5,9 @@
 ;;
 
 (setq ct-org-packages
-      '((org :location built-in)
-        (org-agenda :location built-in)
+      '(
+        ;; (org :location built-in)
+        ;; (org-agenda :location built-in)
         ;; org-bullets
         ))
 
