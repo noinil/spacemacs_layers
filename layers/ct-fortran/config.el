@@ -18,4 +18,4 @@
 (setq f90-continuation-indent 4)
 (setq f90-smart-end 'blink)
 
-(add-hook 'f90-mode-hook '(lambda () (setq fill-column 80)))
+(add-hook 'f90-mode-hook #'(lambda () (setq fill-column 80)))
