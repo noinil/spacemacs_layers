@@ -86,7 +86,7 @@
      ct-erc
      ;; ct-helm
      ct-ibuffer
-     ;; ct-dired
+     ct-dired
      ct-org
      ct-cafemol
      ct-genesis
