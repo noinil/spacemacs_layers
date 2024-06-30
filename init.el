@@ -85,7 +85,7 @@
      ct-cpp
      ct-erc
      ct-ibuffer
-     ct-dired
+     ;; ct-dired
      ct-osx
      ct-org
      ct-cafemol
