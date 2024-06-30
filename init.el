@@ -242,9 +242,9 @@
       (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
 
       ;; flycheck-faces
-      (flycheck-fringe-error :background nil)
-      (flycheck-fringe-warning :background nil)
-      (flycheck-fringe-info :background nil)
+      (flycheck-fringe-error :background unspecified)
+      (flycheck-fringe-warning :background unspecified)
+      (flycheck-fringe-info :background unspecified)
 
       ;; misc
       ;; (helm-prefarg :foreground "PaleGreen")
@@ -288,11 +288,6 @@
       (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1.2))
       (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
       (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
-
-      ;; Flycheck
-      (flycheck-fringe-error :background nil)
-      (flycheck-fringe-warning :background nil)
-      (flycheck-fringe-info :background nil)
 
       ;; Other
       (company-tooltip-annotation
