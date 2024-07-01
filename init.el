@@ -86,7 +86,7 @@
      ct-erc
      ;; ct-helm
      ct-ibuffer
-     ct-dired
+     ;; ct-dired
      ct-org
      ct-cafemol
      ct-genesis
@@ -249,16 +249,16 @@
       (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
 
       ;; flycheck-faces
-      (flycheck-fringe-error :background nil)
-      (flycheck-fringe-warning :background nil)
-      (flycheck-fringe-info :background nil)
+      (flycheck-fringe-error :background unspecified)
+      (flycheck-fringe-warning :background unspecified)
+      (flycheck-fringe-info :background unspecified)
 
       ;; misc
       ;; (helm-prefarg :foreground "PaleGreen")
       ;; (helm-source-header :background "dark cyan")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
-      (term :foreground nil :background nil))
+      (term :foreground nil :background unspecified))
 
      (monokai
       ;; Font locking
@@ -297,11 +297,6 @@
       (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
       (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
 
-      ;; Flycheck
-      (flycheck-fringe-error :background nil)
-      (flycheck-fringe-warning :background nil)
-      (flycheck-fringe-info :background nil)
-
       ;; Other
       (company-tooltip-annotation
        :foreground "#ff9eb8" :background "#49483e")
@@ -310,7 +305,7 @@
       (evil-search-highlight-persist-highlight-face
        :background "#fc5fef" :foreground "#000000")
       (region :background "#998f84")
-      (term :foreground nil :background nil)))))
+      (term :foreground nil :background unspecified)))))
 
 (defun dotspacemacs/user-config ()
   ;; Misc
