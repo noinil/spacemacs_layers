@@ -21,7 +21,6 @@
      semantic
      lsp
      git
-     ;; github
      (org :variables
           org-enable-bootstrap-support t
           org-enable-org-journal-support t)
@@ -49,6 +48,7 @@
      haskell
      javascript
      html
+     perl5
      php
      python
      (julia :variables
@@ -62,7 +62,6 @@
             latex-build-command "xelatex"
             latex-enable-folding t)
      bibtex
-     ;; gtags
      colors
      dash
      erc
@@ -84,9 +83,9 @@
      ct-elisp
      ct-cpp
      ct-erc
-     ;; ct-helm
      ct-ibuffer
      ;; ct-dired
+     ;; ct-osx
      ct-org
      ct-cafemol
      ct-genesis
@@ -106,7 +105,6 @@
      chinese-wbim
      elfeed-org
      org-contrib
-     ;; org-ledger
      leuven-theme
      qml-mode
      scad-mode
@@ -145,10 +143,6 @@
    dotspacemacs-visual-line-move-text t
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-large-file-size 10
-   ;; dotspacemacs-helm-resize nil
-   ;; dotspacemacs-helm-no-header nil
-   ;; dotspacemacs-helm-position 'bottom
-   ;; dotspacemacs-helm-use-fuzzy 'always
    dotspacemacs-enable-paste-transient-state t
    dotspacemacs-which-key-delay 0.5
    dotspacemacs-which-key-position 'bottom
@@ -173,8 +167,9 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  ;; (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")))
-  (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")
+  ;; (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
+  ;; ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
+  (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
                                             ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
@@ -195,9 +190,6 @@
 
    ;; Ranger
    ranger-override-dired nil
-
-   ;; ivy
-   ;; ivy-wrap t
 
    ;; Theme modifications
    spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" box)
@@ -276,7 +268,6 @@
       (font-lock-string-face :foreground "#1aaeed" :slant italic)
       (font-lock-type-face :foreground "#7aa183")
       (font-lock-variable-name-face :foreground "#b8bfed")
-      ;; (helm-prefarg :foreground "PaleGreen")
       (mode-line-buffer-id :foreground "Turquoise")
       (which-key-key-face :foreground "dark cyan")
       (web-mode-html-attr-value-face
@@ -354,7 +345,6 @@
    ruler-mode-current-column-char 86
    size-indication-mode t
    smartparens-global-mode t
-   paradox-github-token t
 
    spaceline-window-numbers-unicode t
    spaceline-workspace-numbers-unicode t

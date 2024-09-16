@@ -26,10 +26,14 @@
    org-agenda-files '("~/Org/life.org"
                       "~/Org/work.org"
                       "~/Org/wiki.org"
+                      "~/Org/notes/misc/gtd.org"
                       "~/Org/notes/work/02_paper/papers.org"
+                      "~/Org/notes/work/03_presentation/presentations.org"
                       "~/Org/notes/work/04_meeting/meetings.org"
                       "~/Org/notes/work/05_projects/projects.org"
                       "~/Org/notes/work/06_discussions/discussions.org"
+                      "~/Org/notes/work/09_review/paper_reviews.org"
+                      "~/Org/notes/work/09_review/project_reviews.org"
                       "~/Org/notes/wiki/00_reading/books.org"
                       "~/Org/notes/wiki/00_reading/literature.org"
                       "~/Org/notes/wiki/01_courses/courses.org"
@@ -76,8 +80,8 @@
 (defun ct-org/post-init-org ()
   (custom-set-faces
    '(org-document-title ((t (:inherit default :height 1.0 :weight bold))))
-   '(org-todo ((t (:foreground "Palevioletred2" :background nil :weight bold))))
-   '(org-done ((t (:foreground "green yellow" :background nil :weight bold))))
+   '(org-todo ((t (:foreground "Palevioletred2" :background unspecified :weight bold))))
+   '(org-done ((t (:foreground "green yellow" :background unspecified :weight bold))))
    '(org-level-8 ((t (:inherit default :height 1.0 :foreground "#98C1D9"))))
    '(org-level-7 ((t (:inherit org-level-8 :height 1.0 :foreground "#577590"))))
    '(org-level-6 ((t (:inherit org-level-8 :height 1.0 :foreground "#43AA8B"))))
