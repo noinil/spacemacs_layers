@@ -9,6 +9,8 @@
         (org :location built-in)
         (org-agenda :location built-in)
         ;; org-bullets
+        ox
+        ox-latex
         ))
 
 (defun ct-org/pre-init-org ()
