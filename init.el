@@ -95,7 +95,15 @@
      )
 
    dotspacemacs-additional-packages
-   '(math-symbols)
+   '(math-symbols
+     editorconfig
+     jsonrpc
+     ox
+     ox-latex
+     (copilot :location (recipe
+                         :fetcher github
+                         :repo "copilot-emacs/copilot.el"
+                         :files ("*.el"))))
 
    dotspacemacs-frozen-packages '()
 
@@ -359,6 +367,17 @@
           ;; yasnippet-snippets-dir
           ))
   (yas-global-mode 1)
+
+  ;; copilot
+  (with-eval-after-load 'company
+    ;; disable inline previews
+    (delq 'company-preview-if-just-one-frontend company-frontends))
+  ;;
+  (with-eval-after-load 'copilot
+    (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+    (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+    (define-key copilot-completion-map (kbd "C-TAB") 'copilot-accept-completion-by-word)
+    (define-key copilot-completion-map (kbd "C-<tab>") 'copilot-accept-completion-by-word))
 
   ;; Keybindings
   (ct-define-key evil-normal-state-map
