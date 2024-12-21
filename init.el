@@ -99,8 +99,8 @@
    '(math-symbols
      editorconfig
      jsonrpc
-     ox
-     ox-latex
+     ;; ox
+     ;; ox-latex
      (copilot :location (recipe
                          :fetcher github
                          :repo "copilot-emacs/copilot.el"
