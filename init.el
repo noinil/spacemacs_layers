@@ -22,6 +22,7 @@
      lsp
      git
      (org :variables
+	  org-enable-org-appear t
           org-enable-bootstrap-support t
           org-enable-org-journal-support t)
      (shell :variables
@@ -176,10 +177,10 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  ;; (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
-  ;; ("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
   (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
-                                            ("gnu" . "elpa.gnu.org/packages/")))
+	("org" . "orgmode.org/elpa/") ("gnu" . "elpa.gnu.org/packages/")))
+  ;; (setq configuration-layer-elpa-archives '(("melpa" . "melpa.org/packages/")   
+                                            ;; ("gnu" . "elpa.gnu.org/packages/")))
   (setq-default
    ;; Miscellaneous
    python-shell-interpreter-args "--simple-prompt"
