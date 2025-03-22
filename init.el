@@ -241,12 +241,12 @@
       (font-latex-string-face :inherit font-lock-string-face)
 
       ;; mode-line-faces
-      (mode-line :box (:color "dark cyan" :line-width 1.2))
-      (powerline-active1 :box (:color "dark cyan" :line-width 1.2) :background "gray20")
-      (powerline-active2 :box (:color "dark cyan" :line-width 1.2) :background "#363A3A")
-      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1.2))
-      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
-      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
+      (mode-line :box (:color "dark cyan" :line-width 1))
+      (powerline-active1 :box (:color "dark cyan" :line-width 1) :background "gray20")
+      (powerline-active2 :box (:color "dark cyan" :line-width 1) :background "#363A3A")
+      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1))
+      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1))
+      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1))
 
       ;; flycheck-faces
       (flycheck-fringe-error :background unspecified)
@@ -289,12 +289,12 @@
       (web-mode-comment-face
        :inherit font-lock-comment-face :foreground nil)
 
-      (mode-line :box (:color "dark cyan" :line-width 1.2))
-      (powerline-active1 :box (:color "dark cyan" :line-width 1.2) :background "gray20")
-      (powerline-active2 :box (:color "dark cyan" :line-width 1.2) :background "#363A3A")
-      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1.2))
-      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1.2))
-      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1.2))
+      (mode-line :box (:color "dark cyan" :line-width 1))
+      (powerline-active1 :box (:color "dark cyan" :line-width 1) :background "gray20")
+      (powerline-active2 :box (:color "dark cyan" :line-width 1) :background "#363A3A")
+      (mode-line-inactive :box (:color "DarkSlateGray" :line-width 1))
+      (powerline-inactive1 :box (:color "DarkSlateGray" :line-width 1))
+      (powerline-inactive2 :box (:color "DarkSlateGray" :line-width 1))
 
       ;; Other
       (company-tooltip-annotation
