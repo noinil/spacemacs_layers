@@ -39,7 +39,7 @@
               theming-headings-same-size 'all
               theming-headings-bold 'all)
      (c-c++ :variables
-            c-c++-enable-clang-support t
+            c-c++-backend 'lsp-clangd
             c-c++-default-mode-for-headers 'c++-mode)
      rust
      emacs-lisp
@@ -53,7 +53,7 @@
      python
      (julia :variables
             lsp-julia-command "julia"
-            lsp-julia-default-environment "~/.julia/environments/v1.1"
+            lsp-julia-default-environment "~/.julia/environments/v1.12" ; update to match your actual Julia version
             julia-mode-enable-lsp t
             julia-mode-enable-ess nil
             julia-max-block-lookback 5000000)
@@ -69,7 +69,6 @@
      ranger
      chrome
      shell-scripts
-     smex
      version-control
      major-modes
      yaml
@@ -134,7 +133,7 @@
 			 monokai
                          spacemacs-light)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Consolas"
+   dotspacemacs-default-font '("JetBrainsMono Nerd Font"
                                :size 26
                                :weight normal
                                :width normal
@@ -146,9 +145,9 @@
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-distinguish-gui-tab nil
-   dotspacemacs-remap-Y-to-y$ t
-   dotspacemacs-retain-visual-state-on-shift t
-   dotspacemacs-visual-line-move-text t
+   vim-style-remap-Y-to-y$ t
+   vim-style-retain-visual-state-on-shift t
+   vim-style-visual-line-move-text t
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-large-file-size 10
    dotspacemacs-enable-paste-transient-state t
@@ -184,13 +183,9 @@
    python-shell-interpreter-args "--simple-prompt"
    exec-path-from-shell-arguments (quote ("-l"))
 
-   ;; Backups
+   ;; Backups (disabled; remove make-backup-files nil to re-enable)
    auto-save-interval 600
    auto-save-timeout 300
-   backup-by-copying t
-   delete-old-versions t
-   kept-new-versions 5
-   kept-old-versions 2
    make-backup-files nil
 
    ;; Evil
