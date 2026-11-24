@@ -38,6 +38,7 @@
                       "~/Org/notes/wiki/00_reading/books.org"
                       "~/Org/notes/wiki/00_reading/literature.org"
                       "~/Org/notes/wiki/01_courses/courses.org"
+		      "~/Org-agent/inbox.org"
                       )
    org-archive-location "~/Org/archive.org::* From %s"
    org-babel-load-languages '((ditaa . t)
