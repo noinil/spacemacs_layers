@@ -36,6 +36,7 @@
                       "~/Org/notes/work/05_projects/projects.org"
                       "~/Org/notes/work/06_discussions/discussions.org"
                       "~/Org/notes/work/09_review/paper_reviews.org"
+                      "~/Org/notes/work/09_review/thesis_reviews.org"
                       "~/Org/notes/work/09_review/project_reviews.org"
                       "~/Org/notes/wiki/00_reading/books.org"
                       "~/Org/notes/wiki/00_reading/literature.org"
